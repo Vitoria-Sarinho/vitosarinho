@@ -6,7 +6,7 @@ const WA_URL =
 export default function Hero() {
   return (
     <section
-      id="top"
+      id="inicio"
       style={{
         background: "var(--marrom-escuro)",
         position: "relative",
