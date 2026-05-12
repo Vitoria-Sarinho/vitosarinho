@@ -36,6 +36,7 @@ export default function SobreMim() {
               width: "100%",
               height: 520,
               objectFit: "cover",
+              objectPosition: "center top",
               borderRadius: "0 var(--vs-radius-xl) 0 var(--vs-radius-xl)",
               display: "block",
             }}
