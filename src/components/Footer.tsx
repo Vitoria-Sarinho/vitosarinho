@@ -1,3 +1,5 @@
+import logoHero from "@/assets/logo-hero.png";
+
 const menu = [
   { label: "Sobre mim", href: "#sobre" },
   { label: "Especialidades", href: "#especialidades" },
@@ -42,10 +44,8 @@ export default function Footer() {
         }}
       >
         <div>
-          <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 500, fontSize: 20, color: "rgba(242,213,187,0.9)" }}>
-            Vitória Sarinho
-          </div>
-          <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 400, fontSize: 13, color: "rgba(242,213,187,0.45)", marginTop: 6 }}>
+          <img src={logoHero} alt="Vitória Sarinho" style={{ height: 40, width: "auto", objectFit: "contain", display: "block" }} />
+          <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 400, fontSize: 13, color: "rgba(242,213,187,0.45)", marginTop: 8 }}>
             Psicóloga Clínica e Neuropsicóloga
           </div>
           <div style={{ height: 1, background: "rgba(199,171,149,0.15)", margin: "20px 0" }} />
