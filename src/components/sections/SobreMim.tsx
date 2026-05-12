@@ -125,9 +125,42 @@ export default function SobreMim() {
         </div>
       </div>
 
+      {/* Faixa de cards abaixo da seção Sobre Mim */}
+      <div
+        className="vs-container cards-sobre"
+        style={{
+          marginTop: 64,
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr",
+          gap: 20,
+        }}
+      >
+        {/* Card 1 */}
+        <div style={{ background: "var(--marrom-escuro)", borderRadius: "var(--vs-radius-md)", padding: "28px 24px", textAlign: "center" }}>
+          <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: 28, color: "#fff", marginBottom: 6 }}>5 anos</div>
+          <div style={{ fontFamily: "Montserrat, sans-serif", fontSize: 13, color: "rgba(242,213,187,0.8)" }}>de experiência clínica</div>
+        </div>
+
+        {/* Card 2 */}
+        <div style={{ background: "var(--marrom)", borderRadius: "var(--vs-radius-md)", padding: "28px 24px", textAlign: "center" }}>
+          <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: 28, color: "#fff", marginBottom: 6 }}>Online</div>
+          <div style={{ fontFamily: "Montserrat, sans-serif", fontSize: 13, color: "rgba(242,213,187,0.8)" }}>Atendimento para todo o Brasil</div>
+        </div>
+
+        {/* Card 3 */}
+        <div style={{ background: "var(--marrom-medio)", borderRadius: "var(--vs-radius-md)", padding: "28px 24px", textAlign: "center" }}>
+          <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 600, fontSize: 11, color: "var(--nude-claro)", letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: 4 }}>CRP</div>
+          <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: 22, color: "#fff", marginBottom: 4 }}>02/28587</div>
+          <div style={{ fontFamily: "Montserrat, sans-serif", fontSize: 12, color: "rgba(242,213,187,0.75)" }}>Psicóloga registrada</div>
+        </div>
+      </div>
+
       <style>{`
         @media (min-width: 1024px) {
           .vs-sobre-grid { grid-template-columns: 45% 55% !important; gap: 80px !important; }
+        }
+        @media (max-width: 768px) {
+          .cards-sobre { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </section>
