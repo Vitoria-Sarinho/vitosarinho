@@ -1,26 +1,40 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/sections/Hero";
+import SobreMim from "@/components/sections/SobreMim";
+import Especialidades from "@/components/sections/Especialidades";
+import ComoFuncionaPsicoterapia from "@/components/sections/ComoFuncionaPsicoterapia";
+import ComoFuncionaAvaliacao from "@/components/sections/ComoFuncionaAvaliacao";
+import Depoimentos from "@/components/sections/Depoimentos";
+import CTAFinal from "@/components/sections/CTAFinal";
+import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  useEffect(() => {
+    document.body.classList.add("vs-site");
+    return () => document.body.classList.remove("vs-site");
+  }, []);
+
+  return (
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <SobreMim />
+        <Especialidades />
+        <ComoFuncionaPsicoterapia />
+        <ComoFuncionaAvaliacao />
+        <Depoimentos />
+        <CTAFinal />
+      </main>
+      <Footer />
+      <WhatsAppButton />
+    </>
+  );
 }
