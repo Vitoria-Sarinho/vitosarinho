@@ -18,6 +18,13 @@ export const Route = createFileRoute("/")({
 function Index() {
   useEffect(() => {
     document.body.classList.add("vs-site");
+    // Remove qualquer hash da URL e força scroll ao topo antes da pintura
+    if (typeof window !== "undefined") {
+      if (window.location.hash) {
+        history.replaceState(null, "", window.location.pathname + window.location.search);
+      }
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
+    }
     return () => document.body.classList.remove("vs-site");
   }, []);
 
