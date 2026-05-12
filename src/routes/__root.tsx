@@ -72,19 +72,30 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Vitória Sarinho — Psicóloga Clínica e Neuropsicóloga | CRP 02/28587" },
+      {
+        name: "description",
+        content:
+          "Atendimento humanizado em Psicoterapia Clínica e Avaliação Neuropsicológica online para todo o Brasil. Vitória Sarinho — CRP 02/28587.",
+      },
+      { name: "author", content: "Vitória Sarinho" },
+      { property: "og:title", content: "Vitória Sarinho — Psicóloga Clínica e Neuropsicóloga" },
+      {
+        property: "og:description",
+        content:
+          "Atendimento humanizado em Psicoterapia Clínica e Avaliação Neuropsicológica online para todo o Brasil.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:locale", content: "pt_BR" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap",
       },
     ],
   }),
@@ -96,7 +107,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>

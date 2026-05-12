@@ -142,3 +142,63 @@
     color: var(--color-foreground);
   }
 }
+
+/* ===== Vitória Sarinho — Design System ===== */
+:root {
+  --nude-claro: #F2D5BB;
+  --nude-medio: #D9946C;
+  --terracota: #C67A63;
+  --bege-rosado: #BC8D7B;
+  --cobre: #C89373;
+  --marrom: #8C4130;
+  --marrom-medio: #8C3D2B;
+  --marrom-escuro: #400F0F;
+  --quase-preto: #2A1008;
+  --cinza-claro: #D9D8D7;
+  --nude-fundo: #F9F3EE;
+  --branco: #FFFFFF;
+  --texto-escuro: #2A1A14;
+  --texto-medio: #5C3D32;
+  --texto-suave: #8C6B5C;
+  --texto-muted: #B09080;
+  --vs-radius-sm: 8px;
+  --vs-radius-md: 16px;
+  --vs-radius-lg: 28px;
+  --vs-radius-xl: 40px;
+}
+
+html { scroll-behavior: smooth; }
+
+body.vs-site {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  background-color: var(--nude-fundo);
+  color: var(--texto-escuro);
+  -webkit-font-smoothing: antialiased;
+}
+
+.vs-site h1, .vs-site h2, .vs-site h3, .vs-site h4 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
+  color: var(--texto-escuro);
+}
+
+.vs-section { padding: 96px 0; }
+.vs-container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+@media (max-width: 768px) {
+  .vs-section { padding: 64px 0; }
+  .vs-container { padding: 0 20px; }
+}
+
+@keyframes vs-float-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.vs-float-in { opacity: 0; animation: vs-float-in 0.6s ease forwards; }
+
+@keyframes vs-pop-in {
+  from { opacity: 0; transform: scale(0); }
+  to { opacity: 1; transform: scale(1); }
+}
+.vs-pop-in { opacity: 0; animation: vs-pop-in 0.5s cubic-bezier(0.34,1.56,0.64,1) forwards; }

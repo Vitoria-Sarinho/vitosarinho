@@ -1,0 +1,135 @@
+import heroImg from "@/assets/vitoria-hero.png";
+
+const valores = ["Ética profissional", "Escuta ativa", "Sigilo garantido", "Humanização"];
+
+export default function SobreMim() {
+  return (
+    <section id="sobre" className="vs-section" style={{ background: "#FFFFFF" }}>
+      <div
+        className="vs-container vs-sobre-grid"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr",
+          gap: 56,
+          alignItems: "center",
+        }}
+      >
+        <div style={{ position: "relative" }}>
+          <div
+            aria-hidden
+            style={{
+              position: "absolute",
+              top: -16,
+              left: -16,
+              width: 200,
+              height: 200,
+              border: "2px solid var(--terracota)",
+              zIndex: 0,
+            }}
+          />
+          <img
+            src={heroImg}
+            alt="Vitória Sarinho em seu consultório"
+            style={{
+              position: "relative",
+              zIndex: 1,
+              width: "100%",
+              height: 520,
+              objectFit: "cover",
+              borderRadius: "0 var(--vs-radius-xl) 0 var(--vs-radius-xl)",
+              display: "block",
+            }}
+          />
+        </div>
+
+        <div>
+          <div
+            style={{
+              fontFamily: "Montserrat, sans-serif",
+              fontWeight: 500,
+              fontSize: 11,
+              textTransform: "uppercase",
+              letterSpacing: "0.2em",
+              color: "var(--terracota)",
+              marginBottom: 16,
+            }}
+          >
+            SOBRE MIM
+          </div>
+
+          <h2
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontWeight: 600,
+              fontSize: "clamp(28px, 4vw, 38px)",
+              color: "var(--marrom-escuro)",
+              marginBottom: 24,
+            }}
+          >
+            Cuidar é o meu propósito.
+          </h2>
+
+          <p style={{ fontFamily: "Montserrat, sans-serif", fontSize: 16, color: "var(--texto-medio)", marginBottom: 20, lineHeight: 1.8 }}>
+            Sou Vitória Sarinho, psicóloga clínica e neuropsicóloga com 5 anos de experiência. Meu
+            trabalho nasceu de um propósito: criar um espaço onde cada pessoa seja realmente ouvida,
+            respeitada e acolhida na sua individualidade.
+          </p>
+          <p style={{ fontFamily: "Montserrat, sans-serif", fontSize: 16, color: "var(--texto-medio)", lineHeight: 1.8 }}>
+            Acredito que o cuidado com a saúde mental transforma vidas — e me comprometo com esse
+            processo em cada atendimento, com ética, escuta ativa e técnica baseada em evidências.
+          </p>
+
+          <div style={{ height: 1, background: "rgba(199,171,149,0.3)", margin: "28px 0" }} />
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: 16,
+              marginBottom: 32,
+            }}
+          >
+            {valores.map((v) => (
+              <div key={v} style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M3 8.5L6.5 12 13 4.5" stroke="var(--terracota)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <span style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 500, fontSize: 14, color: "var(--texto-medio)" }}>
+                  {v}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <div
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 10,
+              border: "1.5px solid rgba(140,65,48,0.25)",
+              background: "rgba(242,213,187,0.3)",
+              borderRadius: "var(--vs-radius-sm)",
+              padding: "10px 18px",
+              fontFamily: "Montserrat, sans-serif",
+              fontWeight: 500,
+              fontSize: 13,
+              color: "var(--marrom)",
+            }}
+          >
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <circle cx="7" cy="7" r="6" stroke="var(--marrom)" strokeWidth="1.4" />
+              <path d="M4.5 7L6 8.5 9.5 5" stroke="var(--marrom)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            CRP 02/28587 — Conselho Regional de Psicologia
+          </div>
+        </div>
+      </div>
+
+      <style>{`
+        @media (min-width: 1024px) {
+          .vs-sobre-grid { grid-template-columns: 45% 55% !important; gap: 80px !important; }
+        }
+      `}</style>
+    </section>
+  );
+}
