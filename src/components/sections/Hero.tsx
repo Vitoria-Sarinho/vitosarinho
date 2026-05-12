@@ -277,42 +277,62 @@ export default function Hero() {
       </div>
 
       {/* Jung quote — full width below */}
-      <div
-        style={{
-          position: "relative",
-          zIndex: 2,
-          textAlign: "center",
-          marginTop: 32,
-          paddingBottom: 8,
-        }}
-      >
-        <div style={{ width: 60, height: 1, background: "rgba(199,171,149,0.2)", margin: "0 auto 16px" }} />
-        <p
-          style={{
-            fontFamily: "'Playfair Display', serif",
-            fontStyle: "italic",
-            fontSize: 14,
-            color: "rgba(242,213,187,0.45)",
-            maxWidth: 720,
-            margin: "0 auto",
-            padding: "0 24px",
-            lineHeight: 1.7,
-          }}
-        >
-          Conheça todas as teorias, domine todas as técnicas, mas ao tocar uma alma humana, seja
-          apenas outra alma humana.
-        </p>
-        <div
-          style={{
-            fontFamily: "Montserrat, sans-serif",
-            fontWeight: 400,
-            fontSize: 12,
-            color: "rgba(242,213,187,0.35)",
-            marginTop: 10,
-          }}
-        >
-          Carl Jung
+      <div style={{
+        position: "relative",
+        zIndex: 2,
+        width: '100%',
+        padding: '40px 24px 48px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: '0',
+      }}>
+        <div style={{
+          fontFamily: "'Playfair Display', serif",
+          fontSize: '72px',
+          lineHeight: '0.6',
+          color: 'rgba(199, 122, 99, 0.5)',
+          marginBottom: '20px',
+          userSelect: 'none',
+        }}>
+          "
         </div>
+
+        <blockquote style={{
+          fontFamily: "'Playfair Display', serif",
+          fontStyle: 'italic',
+          fontWeight: 400,
+          fontSize: 'clamp(16px, 2vw, 20px)',
+          lineHeight: '1.7',
+          color: 'rgba(242, 213, 187, 0.85)',
+          textAlign: 'center',
+          maxWidth: '680px',
+          margin: '0',
+          padding: '0',
+          border: 'none',
+        }}>
+          Conheça todas as teorias, domine todas as técnicas, mas ao tocar
+          uma alma humana, seja apenas outra alma humana.
+        </blockquote>
+
+        <div style={{
+          width: '48px',
+          height: '1px',
+          background: 'rgba(198, 122, 99, 0.4)',
+          margin: '20px auto',
+        }} />
+
+        <cite style={{
+          fontFamily: "'Montserrat', sans-serif",
+          fontStyle: 'normal',
+          fontWeight: 500,
+          fontSize: '13px',
+          letterSpacing: '0.18em',
+          textTransform: 'uppercase',
+          color: 'var(--terracota)',
+        }}>
+          Carl Jung
+        </cite>
       </div>
 
       <style>{`
