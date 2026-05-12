@@ -10,38 +10,27 @@ export default function Hero() {
       style={{
         background: "var(--marrom-escuro)",
         position: "relative",
-        minHeight: "100vh",
+        maxHeight: "88vh",
         overflow: "hidden",
         marginTop: "-72px",
-        paddingTop: 120,
-        paddingBottom: 80,
+        paddingTop: 110,
+        paddingBottom: 40,
       }}
     >
-      {/* Decorative orb */}
       <div
         aria-hidden
         style={{
           position: "absolute",
-          right: "-200px",
-          top: "10%",
-          width: 700,
-          height: 700,
+          right: "-150px",
+          top: "5%",
+          width: 600,
+          height: 600,
           borderRadius: "50%",
-          background: "rgba(199,171,149,0.06)",
+          background: "rgba(199,171,149,0.05)",
           pointerEvents: "none",
+          zIndex: 0,
         }}
       />
-      <svg
-        aria-hidden
-        style={{ position: "absolute", left: 40, bottom: 40, opacity: 1, pointerEvents: "none" }}
-        width="220"
-        height="120"
-        viewBox="0 0 220 120"
-        fill="none"
-      >
-        <path d="M0 100 Q 60 20, 120 70 T 220 40" stroke="rgba(242,213,187,0.08)" strokeWidth="1" fill="none" />
-        <path d="M0 110 Q 80 50, 140 90 T 220 70" stroke="rgba(242,213,187,0.08)" strokeWidth="1" fill="none" />
-      </svg>
 
       <div
         className="vs-container vs-hero-grid"
@@ -50,113 +39,10 @@ export default function Hero() {
           zIndex: 2,
           display: "grid",
           gridTemplateColumns: "1fr",
-          gap: 56,
+          gap: 40,
           alignItems: "center",
         }}
       >
-        {/* Photo column */}
-        <div
-          className="vs-hero-photo"
-          style={{ position: "relative", minHeight: 420, order: 1 }}
-        >
-          <img
-            src={heroImg}
-            alt="Vitória Sarinho, psicóloga clínica e neuropsicóloga, em seu consultório"
-            style={{
-              width: "100%",
-              height: "100%",
-              minHeight: 580,
-              objectFit: "cover",
-              objectPosition: "center top",
-              display: "block",
-            }}
-          />
-          <div
-            aria-hidden
-            style={{
-              position: "absolute",
-              inset: 0,
-              background: "linear-gradient(to right, var(--marrom-escuro) 0%, transparent 30%)",
-              pointerEvents: "none",
-            }}
-          />
-
-          {/* Badge 1 */}
-          <div
-            className="vs-float-in"
-            style={{
-              position: "absolute",
-              top: 32,
-              right: 24,
-              background: "rgba(255,255,255,0.12)",
-              backdropFilter: "blur(12px)",
-              WebkitBackdropFilter: "blur(12px)",
-              border: "1px solid rgba(255,255,255,0.15)",
-              borderRadius: "var(--vs-radius-md)",
-              padding: "12px 20px",
-              animationDelay: "0.6s",
-            }}
-          >
-            <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: 22, color: "#fff" }}>
-              5 anos
-            </div>
-            <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 400, fontSize: 12, color: "rgba(242,213,187,0.7)" }}>
-              de experiência
-            </div>
-          </div>
-
-          {/* Badge 2 */}
-          <div
-            className="vs-float-in"
-            style={{
-              position: "absolute",
-              top: "45%",
-              left: 16,
-              background: "rgba(255,255,255,0.12)",
-              backdropFilter: "blur(12px)",
-              WebkitBackdropFilter: "blur(12px)",
-              border: "1px solid rgba(255,255,255,0.15)",
-              borderRadius: "var(--vs-radius-md)",
-              padding: "12px 20px",
-              animationDelay: "0.9s",
-            }}
-          >
-            <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: 18, color: "#fff" }}>
-              Atendimento
-            </div>
-            <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 400, fontSize: 12, color: "rgba(242,213,187,0.7)" }}>
-              online · Todo o Brasil
-            </div>
-          </div>
-
-          {/* Badge 3 */}
-          <div
-            className="vs-float-in"
-            style={{
-              position: "absolute",
-              bottom: 32,
-              right: 24,
-              background: "rgba(255,255,255,0.12)",
-              backdropFilter: "blur(12px)",
-              WebkitBackdropFilter: "blur(12px)",
-              border: "1px solid rgba(255,255,255,0.15)",
-              borderRadius: "var(--vs-radius-md)",
-              padding: "12px 20px",
-              animationDelay: "1.2s",
-            }}
-          >
-            <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 600, fontSize: 11, color: "var(--terracota)", letterSpacing: "0.1em" }}>
-              CRP
-            </div>
-            <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 700, fontSize: 20, color: "#fff" }}>
-              02/28587
-            </div>
-            <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 400, fontSize: 11, color: "rgba(242,213,187,0.6)", marginTop: 2 }}>
-              Psicóloga registrada
-            </div>
-          </div>
-        </div>
-
         {/* Text column */}
         <div className="vs-hero-text" style={{ order: 2 }}>
           <div
@@ -167,7 +53,7 @@ export default function Hero() {
               letterSpacing: "0.2em",
               textTransform: "uppercase",
               color: "var(--terracota)",
-              marginBottom: 24,
+              marginBottom: 20,
             }}
           >
             PSICÓLOGA CLÍNICA · CRP 02/28587
@@ -177,10 +63,10 @@ export default function Hero() {
             style={{
               fontFamily: "'Playfair Display', serif",
               fontWeight: 500,
-              fontSize: "clamp(38px, 6vw, 58px)",
+              fontSize: "clamp(36px, 5.5vw, 54px)",
               lineHeight: 1.1,
               color: "#FFFFFF",
-              marginBottom: 28,
+              marginBottom: 22,
             }}
           >
             Sua dor acolhida,
@@ -198,39 +84,13 @@ export default function Hero() {
               lineHeight: 1.8,
               color: "rgba(242,213,187,0.75)",
               maxWidth: 460,
-              marginBottom: 32,
             }}
           >
             Atendimento humanizado e especializado em Neuropsicologia e Psicoterapia Clínica para
             mulheres que buscam bem-estar e autoconhecimento.
           </p>
 
-          <div
-            style={{
-              borderTop: "1px solid rgba(199,171,149,0.2)",
-              paddingTop: 20,
-              maxWidth: 420,
-            }}
-          >
-            <p
-              style={{
-                fontFamily: "'Playfair Display', serif",
-                fontStyle: "italic",
-                fontSize: 14,
-                color: "rgba(242,213,187,0.5)",
-                lineHeight: 1.7,
-              }}
-            >
-              "Conheça todas as teorias, domine todas as técnicas, mas ao tocar uma alma humana,
-              seja apenas outra alma humana."
-              <br />
-              <span style={{ fontStyle: "normal", fontFamily: "Montserrat, sans-serif", fontSize: 12 }}>
-                — Carl Jung
-              </span>
-            </p>
-          </div>
-
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 16, marginTop: 40 }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 36 }}>
             <a
               href={WA_URL}
               target="_blank"
@@ -239,15 +99,12 @@ export default function Hero() {
               style={{
                 background: "var(--terracota)",
                 color: "#fff",
-                padding: "16px 36px",
+                padding: "15px 34px",
                 borderRadius: "var(--vs-radius-md)",
                 fontFamily: "Montserrat, sans-serif",
                 fontWeight: 500,
                 fontSize: 15,
                 textDecoration: "none",
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 10,
                 transition: "all 0.2s ease",
               }}
               onMouseEnter={(e) => {
@@ -259,7 +116,7 @@ export default function Hero() {
                 e.currentTarget.style.transform = "translateY(0)";
               }}
             >
-              Falar com especialista <span aria-hidden>→</span>
+              Falar com especialista
             </a>
             <a
               href="#sobre"
@@ -267,7 +124,7 @@ export default function Hero() {
               style={{
                 border: "1.5px solid rgba(242,213,187,0.35)",
                 color: "rgba(242,213,187,0.85)",
-                padding: "16px 36px",
+                padding: "15px 34px",
                 borderRadius: "var(--vs-radius-md)",
                 fontFamily: "Montserrat, sans-serif",
                 fontWeight: 500,
@@ -277,7 +134,7 @@ export default function Hero() {
                 transition: "all 0.2s ease",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "rgba(242,213,187,0.08)";
+                e.currentTarget.style.background = "rgba(242,213,187,0.07)";
                 e.currentTarget.style.borderColor = "rgba(242,213,187,0.6)";
               }}
               onMouseLeave={(e) => {
@@ -291,10 +148,10 @@ export default function Hero() {
 
           <div
             style={{
-              marginTop: 36,
+              marginTop: 28,
               display: "flex",
               flexWrap: "wrap",
-              gap: 14,
+              gap: 20,
               alignItems: "center",
               fontFamily: "Montserrat, sans-serif",
               fontSize: 13,
@@ -307,16 +164,160 @@ export default function Hero() {
                   <path d="M2 6.5L4.8 9 10 3" stroke="var(--terracota)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 {t}
-                {i < 2 && <span style={{ marginLeft: 14, color: "rgba(242,213,187,0.3)" }}>·</span>}
+                {i < 2 && <span style={{ marginLeft: 8, color: "rgba(242,213,187,0.3)" }}>·</span>}
               </span>
             ))}
           </div>
+        </div>
+
+        {/* Photo column */}
+        <div
+          className="vs-hero-photo"
+          style={{ position: "relative", order: 1, height: 480 }}
+        >
+          <img
+            src={heroImg}
+            alt="Vitória Sarinho, psicóloga clínica e neuropsicóloga, em seu consultório"
+            style={{
+              width: "100%",
+              height: 480,
+              objectFit: "cover",
+              objectPosition: "center top",
+              display: "block",
+            }}
+          />
+          <div
+            aria-hidden
+            style={{
+              position: "absolute",
+              left: 0,
+              top: 0,
+              bottom: 0,
+              width: "30%",
+              background: "linear-gradient(to right, var(--marrom-escuro) 0%, transparent 100%)",
+              pointerEvents: "none",
+            }}
+          />
+
+          {/* Badge 1 — top right */}
+          <div
+            className="vs-float-in"
+            style={{
+              position: "absolute",
+              top: 24,
+              right: 20,
+              background: "rgba(255,255,255,0.10)",
+              backdropFilter: "blur(14px)",
+              WebkitBackdropFilter: "blur(14px)",
+              border: "1px solid rgba(255,255,255,0.15)",
+              borderRadius: "var(--vs-radius-md)",
+              padding: "12px 20px",
+              animationDelay: "0.6s",
+            }}
+          >
+            <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: 22, color: "#fff" }}>
+              5 anos
+            </div>
+            <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 400, fontSize: 12, color: "rgba(242,213,187,0.7)" }}>
+              de experiência
+            </div>
+          </div>
+
+          {/* Badge 2 — middle left */}
+          <div
+            className="vs-float-in"
+            style={{
+              position: "absolute",
+              top: "45%",
+              left: 12,
+              background: "rgba(255,255,255,0.10)",
+              backdropFilter: "blur(14px)",
+              WebkitBackdropFilter: "blur(14px)",
+              border: "1px solid rgba(255,255,255,0.15)",
+              borderRadius: "var(--vs-radius-md)",
+              padding: "12px 18px",
+              animationDelay: "0.9s",
+            }}
+          >
+            <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: 16, color: "#fff" }}>
+              Atendimento Online
+            </div>
+            <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 400, fontSize: 12, color: "rgba(242,213,187,0.65)" }}>
+              Todo o Brasil
+            </div>
+          </div>
+
+          {/* Badge 3 — bottom right */}
+          <div
+            className="vs-float-in"
+            style={{
+              position: "absolute",
+              bottom: 24,
+              right: 20,
+              background: "rgba(255,255,255,0.10)",
+              backdropFilter: "blur(14px)",
+              WebkitBackdropFilter: "blur(14px)",
+              border: "1px solid rgba(255,255,255,0.15)",
+              borderRadius: "var(--vs-radius-md)",
+              padding: "12px 18px",
+              animationDelay: "1.2s",
+            }}
+          >
+            <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 600, fontSize: 10, color: "var(--terracota)", letterSpacing: "0.15em", textTransform: "uppercase" }}>
+              CRP
+            </div>
+            <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 700, fontSize: 19, color: "#fff" }}>
+              02/28587
+            </div>
+            <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 400, fontSize: 11, color: "rgba(242,213,187,0.55)", marginTop: 2 }}>
+              Psicóloga registrada
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Jung quote — full width below */}
+      <div
+        style={{
+          position: "relative",
+          zIndex: 2,
+          textAlign: "center",
+          marginTop: 32,
+          paddingBottom: 8,
+        }}
+      >
+        <div style={{ width: 60, height: 1, background: "rgba(199,171,149,0.2)", margin: "0 auto 16px" }} />
+        <p
+          style={{
+            fontFamily: "'Playfair Display', serif",
+            fontStyle: "italic",
+            fontSize: 14,
+            color: "rgba(242,213,187,0.45)",
+            maxWidth: 720,
+            margin: "0 auto",
+            padding: "0 24px",
+            lineHeight: 1.7,
+          }}
+        >
+          Conheça todas as teorias, domine todas as técnicas, mas ao tocar uma alma humana, seja
+          apenas outra alma humana.
+        </p>
+        <div
+          style={{
+            fontFamily: "Montserrat, sans-serif",
+            fontWeight: 400,
+            fontSize: 12,
+            color: "rgba(242,213,187,0.35)",
+            marginTop: 10,
+          }}
+        >
+          Carl Jung
         </div>
       </div>
 
       <style>{`
         @media (min-width: 1024px) {
-          .vs-hero-grid { grid-template-columns: 1fr 1fr !important; gap: 64px !important; }
+          .vs-hero-grid { grid-template-columns: 52% 48% !important; gap: 48px !important; }
           .vs-hero-text { order: 1 !important; }
           .vs-hero-photo { order: 2 !important; }
         }

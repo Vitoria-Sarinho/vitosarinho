@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import logoHero from "@/assets/logo-hero.png";
+import logoColorido from "@/assets/logo-colorido.png";
 
 const WA_URL =
   "https://wa.me/5581998396041?text=Ol%C3%A1%20Vit%C3%B3ria%2C%20gostaria%20de%20agendar%20uma%20consulta!";
@@ -22,7 +24,7 @@ export default function Navbar() {
   }, []);
 
   const linkColor = scrolled ? "var(--texto-medio)" : "rgba(255,255,255,0.85)";
-  const logoColor = scrolled ? "var(--marrom-escuro)" : "#FFFFFF";
+  const iconColor = scrolled ? "var(--marrom-escuro)" : "#FFFFFF";
 
   return (
     <>
@@ -50,16 +52,14 @@ export default function Navbar() {
         >
           <a
             href="#top"
-            style={{
-              fontFamily: "'Playfair Display', serif",
-              fontWeight: 500,
-              fontSize: 19,
-              color: logoColor,
-              transition: "color 0.4s ease",
-              textDecoration: "none",
-            }}
+            aria-label="Vitória Sarinho — Início"
+            style={{ display: "inline-flex", alignItems: "center", textDecoration: "none" }}
           >
-            Vitória Sarinho
+            <img
+              src={scrolled ? logoColorido : logoHero}
+              alt="Vitória Sarinho"
+              style={{ height: 44, width: "auto", objectFit: "contain", transition: "opacity 0.4s ease" }}
+            />
           </a>
 
           <nav className="vs-nav-desktop" style={{ display: "none", alignItems: "center", gap: 36 }}>
@@ -122,7 +122,7 @@ export default function Navbar() {
               border: "none",
               cursor: "pointer",
               padding: 8,
-              color: logoColor,
+              color: iconColor,
               transition: "color 0.4s ease",
             }}
           >

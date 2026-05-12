@@ -1,4 +1,4 @@
-import heroImg from "@/assets/vitoria-hero.png";
+import heroImg from "@/assets/foto-sobre.jpg";
 
 const valores = ["Ética profissional", "Escuta ativa", "Sigilo garantido", "Humanização"];
 
