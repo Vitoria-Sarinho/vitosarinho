@@ -241,13 +241,14 @@ export default function Depoimentos() {
         </p>
       </div>
       <style>{`
+        .vs-depo-card::-webkit-scrollbar { display: none; }
         @media (min-width: 1024px) {
           .vs-depo-desktop { display: grid !important; }
           .vs-depo-mobile { display: none !important; }
         }
         @media (max-width: 767px) {
           .vs-depo-mobile { overflow: hidden !important; }
-          .vs-depo-card { padding: 28px 24px !important; }
+          .vs-depo-card { padding: 28px 24px !important; max-height: 280px !important; }
           .vs-depo-quote { font-size: 64px !important; }
         }
       `}</style>
