@@ -206,17 +206,78 @@ export default function Hero() {
         {/* Photo column */}
         <div
           className="vs-hero-photo"
-          style={{ position: "relative", order: 1, height: 480 }}
+          style={{
+            position: "relative",
+            order: 1,
+            height: 480,
+            overflow: "visible",
+            borderRadius: "0 var(--radius-xl) var(--radius-xl) 0",
+          }}
         >
+          {/* Decorative halo (main circle) */}
+          <div
+            aria-hidden
+            style={{
+              position: "absolute",
+              top: "50%",
+              right: -40,
+              transform: "translateY(-50%)",
+              width: 520,
+              height: 520,
+              borderRadius: "50%",
+              background:
+                "radial-gradient(circle at 40% 40%, rgba(198, 122, 99, 0.18) 0%, rgba(140, 65, 48, 0.10) 45%, transparent 70%)",
+              filter: "blur(2px)",
+              pointerEvents: "none",
+              zIndex: -1,
+            }}
+          />
+          {/* Decorative outer ring */}
+          <div
+            aria-hidden
+            style={{
+              position: "absolute",
+              top: "50%",
+              right: -70,
+              transform: "translateY(-50%)",
+              width: 580,
+              height: 580,
+              borderRadius: "50%",
+              background: "transparent",
+              border: "1.5px solid rgba(198, 122, 99, 0.14)",
+              pointerEvents: "none",
+              zIndex: -1,
+            }}
+          />
+          {/* Bottom-right accent */}
+          <div
+            aria-hidden
+            style={{
+              position: "absolute",
+              bottom: -40,
+              right: -30,
+              width: 180,
+              height: 180,
+              borderRadius: "50%",
+              background:
+                "radial-gradient(circle at center, rgba(242, 213, 187, 0.14) 0%, transparent 70%)",
+              filter: "blur(8px)",
+              pointerEvents: "none",
+              zIndex: -1,
+            }}
+          />
           <img
             src={heroImg}
             alt="Vitória Sarinho, psicóloga clínica e neuropsicóloga, em seu consultório"
             style={{
+              position: "relative",
+              zIndex: 1,
               width: "100%",
               height: 480,
               objectFit: "cover",
               objectPosition: "center 20%",
               display: "block",
+              borderRadius: "0 var(--radius-xl) var(--radius-xl) 0",
             }}
           />
           <div
@@ -229,6 +290,7 @@ export default function Hero() {
               width: "30%",
               background: "linear-gradient(to right, var(--marrom-escuro) 0%, transparent 100%)",
               pointerEvents: "none",
+              zIndex: 2,
             }}
           />
           <div
@@ -241,7 +303,7 @@ export default function Hero() {
               width: 80,
               background: "linear-gradient(to left, rgba(64,15,15,0.35) 0%, transparent 100%)",
               pointerEvents: "none",
-              zIndex: 1,
+              zIndex: 2,
             }}
           />
           <div
@@ -254,7 +316,7 @@ export default function Hero() {
               height: 60,
               background: "linear-gradient(to bottom, rgba(64,15,15,0.25) 0%, transparent 100%)",
               pointerEvents: "none",
-              zIndex: 1,
+              zIndex: 2,
             }}
           />
 
