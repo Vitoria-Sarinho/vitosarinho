@@ -88,7 +88,7 @@ function PrivacidadePage() {
 
   return (
     <>
-      <Navbar />
+      <Navbar forceLight={true} />
       <main style={{ background: "var(--nude-fundo)", paddingTop: 120, paddingBottom: 80 }}>
         <article
           style={{
