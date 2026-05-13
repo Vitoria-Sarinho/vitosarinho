@@ -77,7 +77,7 @@ export default function Hero() {
         }}
       >
         {/* Text column */}
-        <div className="vs-hero-text" style={{ order: 2 }}>
+        <div className="vs-hero-text" style={{ order: 1 }}>
           <div
             style={{
               fontFamily: "Montserrat, sans-serif",
@@ -123,7 +123,7 @@ export default function Hero() {
             mulheres que buscam bem-estar e autoconhecimento.
           </p>
 
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 36 }}>
+          <div className="vs-hero-cta" style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 36 }}>
             <a
               href={WA_URL}
               target="_blank"
@@ -208,7 +208,7 @@ export default function Hero() {
           className="vs-hero-photo"
           style={{
             position: "relative",
-            order: 1,
+            order: 2,
             height: 480,
             overflow: "visible",
             borderRadius: "0 var(--radius-xl) var(--radius-xl) 0",
@@ -384,6 +384,10 @@ export default function Hero() {
       </div>
 
       <style>{`
+        @media (max-width: 767px) {
+          .vs-hero-cta { flex-direction: column !important; gap: 12px !important; align-items: stretch !important; }
+          .vs-hero-cta > a { width: 100% !important; text-align: center !important; padding: 16px 24px !important; }
+        }
         @media (min-width: 1024px) {
           .vs-hero-grid { grid-template-columns: 52% 48% !important; gap: 48px !important; }
           .vs-hero-text { order: 1 !important; }
