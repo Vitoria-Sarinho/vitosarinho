@@ -231,6 +231,32 @@ export default function Hero() {
               pointerEvents: "none",
             }}
           />
+          <div
+            aria-hidden
+            style={{
+              position: "absolute",
+              top: 0,
+              right: 0,
+              bottom: 0,
+              width: 80,
+              background: "linear-gradient(to left, rgba(64,15,15,0.35) 0%, transparent 100%)",
+              pointerEvents: "none",
+              zIndex: 1,
+            }}
+          />
+          <div
+            aria-hidden
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              height: 60,
+              background: "linear-gradient(to bottom, rgba(64,15,15,0.25) 0%, transparent 100%)",
+              pointerEvents: "none",
+              zIndex: 1,
+            }}
+          />
 
         </div>
       </div>
