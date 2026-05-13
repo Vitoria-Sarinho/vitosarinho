@@ -284,12 +284,13 @@ export default function Hero() {
         </div>
 
         <blockquote style={{
-          fontFamily: "'Playfair Display', serif",
+          fontFamily: "'Cormorant Garamond', serif",
           fontStyle: 'italic',
-          fontWeight: 400,
-          fontSize: 'clamp(16px, 2vw, 20px)',
-          lineHeight: '1.7',
-          color: 'rgba(242, 213, 187, 0.85)',
+          fontWeight: 300,
+          fontSize: 'clamp(20px, 2.4vw, 26px)',
+          letterSpacing: '0.02em',
+          lineHeight: '1.6',
+          color: 'rgba(242, 213, 187, 0.90)',
           textAlign: 'center',
           maxWidth: '680px',
           margin: '0',
