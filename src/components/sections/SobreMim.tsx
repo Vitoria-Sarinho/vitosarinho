@@ -138,20 +138,20 @@ export default function SobreMim() {
       >
         {/* Card 1 */}
         <div style={{ background: "var(--marrom-escuro)", borderRadius: "var(--vs-radius-md)", padding: "28px 24px", textAlign: "center" }}>
-          <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: 28, color: "#fff", marginBottom: 6 }}>5 anos</div>
+          <div style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500, fontSize: 42, color: "#fff", marginBottom: 6 }}>5 anos</div>
           <div style={{ fontFamily: "Montserrat, sans-serif", fontSize: 13, color: "rgba(242,213,187,0.8)" }}>de experiência clínica</div>
         </div>
 
         {/* Card 2 */}
         <div style={{ background: "var(--marrom)", borderRadius: "var(--vs-radius-md)", padding: "28px 24px", textAlign: "center" }}>
-          <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: 28, color: "#fff", marginBottom: 6 }}>Online</div>
+          <div style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500, fontSize: 42, color: "#fff", marginBottom: 6 }}>Online</div>
           <div style={{ fontFamily: "Montserrat, sans-serif", fontSize: 13, color: "rgba(242,213,187,0.8)" }}>Atendimento para todo o Brasil</div>
         </div>
 
         {/* Card 3 */}
         <div style={{ background: "var(--marrom-medio)", borderRadius: "var(--vs-radius-md)", padding: "28px 24px", textAlign: "center" }}>
           <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 600, fontSize: 11, color: "var(--nude-claro)", letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: 4 }}>CRP</div>
-          <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: 22, color: "#fff", marginBottom: 4 }}>02/28587</div>
+          <div style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500, fontSize: 42, color: "#fff", marginBottom: 4 }}>02/28587</div>
           <div style={{ fontFamily: "Montserrat, sans-serif", fontSize: 12, color: "rgba(242,213,187,0.75)" }}>Psicóloga registrada</div>
         </div>
       </div>
