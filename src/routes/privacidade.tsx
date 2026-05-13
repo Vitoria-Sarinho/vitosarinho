@@ -7,13 +7,13 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 export const Route = createFileRoute("/privacidade")({
   head: () => ({
     meta: [
-      { title: "Política de Privacidade — Vitória Sarinho | CRP 02/28587" },
+      { title: "Política de Privacidade · Vitória Sarinho | CRP 02/28587" },
       {
         name: "description",
         content:
           "Política de Privacidade do site de Vitória Sarinho, em conformidade com a LGPD, Marco Civil da Internet e o Código de Ética do Psicólogo.",
       },
-      { property: "og:title", content: "Política de Privacidade — Vitória Sarinho" },
+      { property: "og:title", content: "Política de Privacidade · Vitória Sarinho" },
       {
         property: "og:description",
         content: "Como tratamos os dados pessoais coletados neste site, em conformidade com a LGPD.",
@@ -124,7 +124,7 @@ function PrivacidadePage() {
             Esta Política de Privacidade descreve como Vitória Sarinho (CRP 02/28587), doravante
             denominada "Psicóloga", coleta, utiliza, armazena e protege as informações fornecidas
             por visitantes e usuários deste site, em conformidade com a Lei Geral de Proteção de
-            Dados Pessoais (Lei 13.709/2018 — LGPD), o Marco Civil da Internet (Lei 12.965/2014),
+            Dados Pessoais (Lei 13.709/2018 (LGPD)), o Marco Civil da Internet (Lei 12.965/2014),
             o Código de Ética Profissional do Psicólogo e as Resoluções do Conselho Federal de
             Psicologia (CFP).
           </p>
@@ -178,15 +178,15 @@ function PrivacidadePage() {
           </p>
           <ul style={ulStyle}>
             <li>
-              Art. 7º, inc. V — execução de contrato ou procedimentos preliminares relacionados
+              Art. 7º, inc. V: execução de contrato ou procedimentos preliminares relacionados
               a contrato do qual seja parte o titular, a seu pedido (agendamento de consulta)
             </li>
             <li>
-              Art. 7º, inc. IX — legítimo interesse da controladora (análise de desempenho do
+              Art. 7º, inc. IX: legítimo interesse da controladora (análise de desempenho do
               site, comunicação com potenciais pacientes)
             </li>
             <li>
-              Art. 7º, inc. I — consentimento do titular, quando aplicável e expressamente
+              Art. 7º, inc. I: consentimento do titular, quando aplicável e expressamente
               solicitado
             </li>
           </ul>
@@ -241,7 +241,7 @@ function PrivacidadePage() {
           </ul>
           <p style={pStyle}>
             Para exercer qualquer um desses direitos, entre em contato pelo e-mail
-            consultoriovitoriasarinho@gmail.com com o assunto "Proteção de Dados — LGPD".
+            consultoriovitoriasarinho@gmail.com com o assunto "Proteção de Dados (LGPD)".
             Responderemos em até 15 dias úteis.
           </p>
 

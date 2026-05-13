@@ -75,7 +75,7 @@ export default function ComoFuncionaAvaliacao() {
             }}
           >
             A avaliação neuropsicológica investiga o funcionamento do cérebro e sua relação com o
-            comportamento, emoções e cognição — compreendendo habilidades como atenção, memória,
+            comportamento, emoções e cognição, compreendendo habilidades como atenção, memória,
             linguagem e raciocínio para um diagnóstico mais preciso e tratamento mais eficaz.
           </p>
         </div>

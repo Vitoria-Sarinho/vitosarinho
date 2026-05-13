@@ -19,7 +19,7 @@ const steps = [
   {
     num: "04",
     title: "Autoconhecimento e evolução",
-    text: "Com o tempo, a psicoterapia favorece maior compreensão de si mesma, fortalecimento emocional e construção de autonomia — mudanças consistentes e graduais.",
+    text: "Com o tempo, a psicoterapia favorece maior compreensão de si mesma, fortalecimento emocional e construção de autonomia, com mudanças consistentes e graduais.",
   },
 ];
 
