@@ -128,16 +128,19 @@ export default function Footer() {
           >
             Política de Privacidade
           </a>
-          <a
-            href="https://nextassessoria.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ fontFamily: "Montserrat, sans-serif", fontSize: 12, color: "rgba(242,213,187,0.3)", textDecoration: "none" }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(242,213,187,0.6)")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(242,213,187,0.3)")}
-          >
-            Desenvolvido por Next Assessoria
-          </a>
+          <span style={{ fontFamily: "Montserrat, sans-serif", fontSize: 12, color: "rgba(242,213,187,0.3)" }}>
+            Desenvolvido por{" "}
+            <a
+              href="https://www.nextassessoria.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "inherit", textDecoration: "none", transition: "color 0.2s ease" }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(242,213,187,0.9)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "inherit")}
+            >
+              Next Assessoria
+            </a>
+          </span>
         </div>
       </div>
 
