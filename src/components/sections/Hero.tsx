@@ -21,12 +21,45 @@ export default function Hero() {
         aria-hidden
         style={{
           position: "absolute",
-          right: "-150px",
-          top: "5%",
-          width: 600,
-          height: 600,
+          top: -60,
+          right: -80,
+          width: 420,
+          height: 420,
+          borderRadius: "60% 40% 55% 45% / 50% 60% 40% 50%",
+          background:
+            "radial-gradient(circle at center, rgba(198,122,99,0.12) 0%, rgba(140,65,48,0.06) 50%, transparent 70%)",
+          filter: "blur(40px)",
+          pointerEvents: "none",
+          zIndex: 0,
+        }}
+      />
+      <div
+        aria-hidden
+        style={{
+          position: "absolute",
+          top: 40,
+          right: 60,
+          width: 200,
+          height: 200,
+          borderRadius: "45% 55% 60% 40% / 55% 45% 50% 50%",
+          background:
+            "radial-gradient(circle at center, rgba(242,213,187,0.10) 0%, transparent 65%)",
+          filter: "blur(24px)",
+          pointerEvents: "none",
+          zIndex: 0,
+        }}
+      />
+      <div
+        aria-hidden
+        style={{
+          position: "absolute",
+          top: 180,
+          right: 20,
+          width: 120,
+          height: 120,
           borderRadius: "50%",
-          background: "rgba(199,171,149,0.05)",
+          background: "rgba(198,122,99,0.08)",
+          filter: "blur(16px)",
           pointerEvents: "none",
           zIndex: 0,
         }}
