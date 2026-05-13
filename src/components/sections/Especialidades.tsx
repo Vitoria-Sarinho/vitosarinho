@@ -13,6 +13,7 @@ function Card({
 }) {
   return (
     <article
+      className="vs-esp-card"
       style={{
         background: "#FFFFFF",
         border: "1px solid rgba(188,141,123,0.25)",
@@ -31,8 +32,9 @@ function Card({
         e.currentTarget.style.borderColor = "rgba(188,141,123,0.25)";
       }}
     >
-      <div>{icon}</div>
+      <div className="vs-esp-icon">{icon}</div>
       <h3
+        className="vs-esp-title"
         style={{
           fontFamily: "'Playfair Display', serif",
           fontWeight: 600,
@@ -163,6 +165,11 @@ export default function Especialidades() {
       <style>{`
         @media (min-width: 768px) {
           .vs-esp-grid { grid-template-columns: 1fr 1fr !important; }
+        }
+        @media (max-width: 767px) {
+          .vs-esp-card { padding: 32px 24px !important; }
+          .vs-esp-icon svg { width: 44px !important; height: 44px !important; }
+          .vs-esp-title { font-size: 20px !important; }
         }
       `}</style>
     </section>

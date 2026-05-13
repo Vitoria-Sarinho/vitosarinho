@@ -17,6 +17,7 @@ export default function SobreMim() {
         <div style={{ position: "relative" }}>
           <div
             aria-hidden
+            className="vs-sobre-deco"
             style={{
               position: "absolute",
               top: -16,
@@ -30,6 +31,7 @@ export default function SobreMim() {
           <img
             src={heroImg}
             alt="Vitória Sarinho em seu consultório"
+            className="vs-sobre-img"
             style={{
               position: "relative",
               zIndex: 1,
@@ -83,6 +85,7 @@ export default function SobreMim() {
           <div style={{ height: 1, background: "rgba(199,171,149,0.3)", margin: "28px 0" }} />
 
           <div
+            className="vs-sobre-valores"
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
@@ -103,6 +106,7 @@ export default function SobreMim() {
           </div>
 
           <div
+            className="vs-sobre-crp"
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -161,7 +165,12 @@ export default function SobreMim() {
           .vs-sobre-grid { grid-template-columns: 45% 55% !important; gap: 80px !important; }
         }
         @media (max-width: 768px) {
-          .cards-sobre { grid-template-columns: 1fr !important; }
+          .cards-sobre { grid-template-columns: 1fr !important; gap: 0 !important; }
+          .cards-sobre > div { border-radius: 0 !important; padding: 28px 24px !important; }
+          .vs-sobre-img { height: 380px !important; border-radius: var(--vs-radius-lg) !important; }
+          .vs-sobre-deco { display: none !important; }
+          .vs-sobre-valores { gap: 12px !important; }
+          .vs-sobre-crp { width: 100% !important; justify-content: center !important; }
         }
       `}</style>
     </section>

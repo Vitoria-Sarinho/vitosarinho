@@ -158,17 +158,18 @@ export default function Navbar({ forceLight = false }: { forceLight?: boolean } 
               padding: "32px 28px",
               display: "flex",
               flexDirection: "column",
-              gap: 24,
             }}
           >
             <button
               aria-label="Fechar menu"
               onClick={() => setOpen(false)}
               style={{
-                alignSelf: "flex-end",
+                position: "absolute",
+                top: 20,
+                right: 20,
                 background: "transparent",
                 border: "none",
-                color: "#fff",
+                color: "rgba(242,213,187,0.6)",
                 cursor: "pointer",
                 padding: 4,
               }}
@@ -177,37 +178,42 @@ export default function Navbar({ forceLight = false }: { forceLight?: boolean } 
                 <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
               </svg>
             </button>
-            {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                style={{
-                  color: "#fff",
-                  fontFamily: "Montserrat, sans-serif",
-                  fontWeight: 500,
-                  fontSize: 16,
-                  textDecoration: "none",
-                  letterSpacing: "0.04em",
-                }}
-              >
-                {l.label}
-              </a>
-            ))}
+            <div style={{ marginTop: 48, display: "flex", flexDirection: "column", flex: 1 }}>
+              {links.map((l) => (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  style={{
+                    color: "rgba(242,213,187,0.85)",
+                    fontFamily: "Montserrat, sans-serif",
+                    fontWeight: 500,
+                    fontSize: 17,
+                    textDecoration: "none",
+                    padding: "16px 0",
+                    borderBottom: "1px solid rgba(255,255,255,0.06)",
+                  }}
+                >
+                  {l.label}
+                </a>
+              ))}
+            </div>
             <a
               href={WA_URL}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Agendar consulta pelo WhatsApp"
+              onClick={() => setOpen(false)}
               style={{
-                marginTop: 12,
+                marginTop: 24,
                 background: "var(--terracota)",
                 color: "#fff",
-                padding: "14px 20px",
+                padding: "16px",
+                width: "100%",
                 borderRadius: "var(--vs-radius-md)",
                 fontFamily: "Montserrat, sans-serif",
                 fontWeight: 500,
-                fontSize: 14,
+                fontSize: 15,
                 textAlign: "center",
                 textDecoration: "none",
               }}
