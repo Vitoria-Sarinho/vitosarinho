@@ -9,22 +9,28 @@ interface Depo {
 
 const items: Depo[] = [
   {
-    text: "Me senti acolhida desde a primeira sessão. Um espaço de escuta genuína, sem julgamentos. Finalmente encontrei um lugar seguro para trabalhar meu desenvolvimento pessoal.",
-    initial: "M",
-    name: "Mariana S.",
+    text: "Muito boa profissional, me senti muito acolhida com ela e seu conhecimento.",
+    initial: "N",
+    name: "N.",
     info: "Paciente · Psicoterapia Clínica",
   },
   {
-    text: "A Vitória tem uma sensibilidade incrível para perceber o que a gente não consegue colocar em palavras. O atendimento humanizado faz toda a diferença no processo.",
-    initial: "C",
-    name: "Camila R.",
+    text: "Excelente profissional! A Vitória é uma profissional humana, ética e extremamente competente. O suporte dela tem me ajudado muito na forma de encarar os meus sentimentos e a minha vida.",
+    initial: "I",
+    name: "I.",
     info: "Paciente · Psicoterapia Clínica",
   },
   {
-    text: "Profissional extremamente ética e comprometida. Me ajudou a entender melhor como funciono emocionalmente, com toda a clareza e o cuidado que eu precisava.",
-    initial: "A",
-    name: "Ana L.",
+    text: "Minha experiência com a avaliação neuropsicológica foi extremamente positiva. O processo uniu qualidade técnica, escuta atenta e acolhimento genuíno. A condução da anamnese considerou meu contexto de forma ampla e cuidadosa, o que trouxe muito mais profundidade e precisão à avaliação. Além do profissionalismo durante todo o processo, também recebi direcionamentos importantes após a devolutiva. Foi uma experiência muito humana e responsável. Recomendo profundamente o seu trabalho.",
+    initial: "N",
+    name: "N.",
     info: "Paciente · Avaliação Neuropsicológica",
+  },
+  {
+    text: "Profissional extremamente acolhedora, me ajudou muito no meu processo de autoconhecimento e enfrentamento das minhas dificuldades utilizando estratégias, demonstrando conhecimento no que estava fazendo. Recomendo!",
+    initial: "V",
+    name: "V.",
+    info: "Paciente · Psicoterapia Clínica",
   },
 ];
 
@@ -41,6 +47,10 @@ function Card({ d }: { d: Depo }) {
         position: "relative",
         overflow: "hidden",
         height: "100%",
+        maxHeight: 320,
+        overflowY: "auto",
+        scrollbarWidth: "none",
+        msOverflowStyle: "none",
       }}
     >
       <span
@@ -231,13 +241,14 @@ export default function Depoimentos() {
         </p>
       </div>
       <style>{`
+        .vs-depo-card::-webkit-scrollbar { display: none; }
         @media (min-width: 1024px) {
           .vs-depo-desktop { display: grid !important; }
           .vs-depo-mobile { display: none !important; }
         }
         @media (max-width: 767px) {
           .vs-depo-mobile { overflow: hidden !important; }
-          .vs-depo-card { padding: 28px 24px !important; }
+          .vs-depo-card { padding: 28px 24px !important; max-height: 280px !important; }
           .vs-depo-quote { font-size: 64px !important; }
         }
       `}</style>
