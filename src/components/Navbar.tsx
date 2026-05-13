@@ -12,17 +12,19 @@ const links = [
   { label: "Contato", href: "#contato" },
 ];
 
-export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
+export default function Navbar({ forceLight = false }: { forceLight?: boolean } = {}) {
+  const [scrolledState, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
+    if (forceLight) return;
     const onScroll = () => setScrolled(window.scrollY > 60);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [forceLight]);
 
+  const scrolled = forceLight || scrolledState;
   const linkColor = scrolled ? "var(--texto-medio)" : "rgba(255,255,255,0.85)";
   const iconColor = scrolled ? "var(--marrom-escuro)" : "#FFFFFF";
 
