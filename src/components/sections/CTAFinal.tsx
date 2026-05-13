@@ -5,6 +5,7 @@ export default function CTAFinal() {
   return (
     <section
       id="contato"
+      className="vs-cta-final"
       style={{
         background: "var(--quase-preto)",
         padding: "120px 0",
@@ -54,6 +55,7 @@ export default function CTAFinal() {
           PRONTA PARA COMEÇAR?
         </div>
         <h2
+          className="vs-cta-h2"
           style={{
             fontFamily: "'Playfair Display', serif",
             fontWeight: 600,
@@ -69,6 +71,7 @@ export default function CTAFinal() {
           sua jornada de cuidado?
         </h2>
         <p
+          className="vs-cta-sub"
           style={{
             fontFamily: "Montserrat, sans-serif",
             fontWeight: 300,
@@ -85,6 +88,7 @@ export default function CTAFinal() {
         </p>
 
         <div
+          className="vs-cta-buttons"
           style={{
             marginTop: 44,
             display: "flex",
@@ -150,6 +154,7 @@ export default function CTAFinal() {
         </div>
 
         <div
+          className="vs-cta-trust"
           style={{
             marginTop: 48,
             display: "flex",
@@ -167,11 +172,22 @@ export default function CTAFinal() {
                 <path d="M2 6.5L4.8 9 10 3" stroke="var(--terracota)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               {t}
-              {i < 2 && <span style={{ marginLeft: 16, color: "rgba(242,213,187,0.25)" }}>·</span>}
+              {i < 2 && <span className="vs-cta-trust-sep" style={{ marginLeft: 16, color: "rgba(242,213,187,0.25)" }}>·</span>}
             </span>
           ))}
         </div>
       </div>
+      <style>{`
+        @media (max-width: 767px) {
+          .vs-cta-final { padding: 72px 0 !important; }
+          .vs-cta-h2 { font-size: 30px !important; }
+          .vs-cta-sub { font-size: 15px !important; }
+          .vs-cta-buttons { flex-direction: column !important; gap: 12px !important; align-items: stretch !important; }
+          .vs-cta-buttons > a { width: 100% !important; text-align: center !important; }
+          .vs-cta-trust { flex-direction: column !important; align-items: center !important; gap: 8px !important; text-align: center !important; }
+          .vs-cta-trust-sep { display: none !important; }
+        }
+      `}</style>
     </section>
   );
 }
