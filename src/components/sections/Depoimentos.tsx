@@ -47,6 +47,10 @@ function Card({ d }: { d: Depo }) {
         position: "relative",
         overflow: "hidden",
         height: "100%",
+        maxHeight: 320,
+        overflowY: "auto",
+        scrollbarWidth: "none",
+        msOverflowStyle: "none",
       }}
     >
       <span
