@@ -146,6 +146,13 @@ export default function Footer() {
           .vs-footer-grid { grid-template-columns: 1fr 1fr 1fr !important; padding: 64px 24px 40px !important; }
           .vs-footer-bottom { flex-direction: row !important; justify-content: space-between !important; text-align: left !important; }
         }
+        @media (max-width: 767px) {
+          .vs-footer-grid { grid-template-columns: 1fr !important; gap: 36px !important; text-align: center !important; }
+          .vs-footer-grid > div { text-align: center !important; }
+          .vs-footer-grid img { margin-left: auto !important; margin-right: auto !important; }
+          .vs-footer-grid a { justify-content: center !important; }
+          .vs-footer-grid > div > div[style*="flex-direction"] { align-items: center !important; }
+        }
       `}</style>
     </footer>
   );
