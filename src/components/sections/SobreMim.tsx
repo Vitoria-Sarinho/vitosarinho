@@ -78,7 +78,7 @@ export default function SobreMim() {
             respeitada e acolhida na sua individualidade.
           </p>
           <p style={{ fontFamily: "Montserrat, sans-serif", fontSize: 16, color: "var(--texto-medio)", lineHeight: 1.8 }}>
-            Acredito que o cuidado com a saúde mental transforma vidas — e me comprometo com esse
+            Acredito que o cuidado com a saúde mental transforma vidas, e me comprometo com esse
             processo em cada atendimento, com ética, escuta ativa e técnica baseada em evidências.
           </p>
 
@@ -125,7 +125,7 @@ export default function SobreMim() {
               <circle cx="7" cy="7" r="6" stroke="var(--marrom)" strokeWidth="1.4" />
               <path d="M4.5 7L6 8.5 9.5 5" stroke="var(--marrom)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            CRP 02/28587 — Conselho Regional de Psicologia
+            CRP 02/28587 · Conselho Regional de Psicologia
           </div>
         </div>
       </div>

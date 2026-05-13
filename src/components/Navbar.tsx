@@ -54,7 +54,7 @@ export default function Navbar({ forceLight = false }: { forceLight?: boolean } 
         >
           <a
             href="#top"
-            aria-label="Vitória Sarinho — Início"
+            aria-label="Vitória Sarinho · Início"
             style={{ display: "inline-flex", alignItems: "center", textDecoration: "none" }}
           >
             <img

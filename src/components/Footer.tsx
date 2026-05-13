@@ -118,7 +118,7 @@ export default function Footer() {
           }}
         >
           <span style={{ fontFamily: "Montserrat, sans-serif", fontSize: 12, color: "rgba(242,213,187,0.35)" }}>
-            © 2026 Vitória Sarinho — Todos os direitos reservados.
+            © 2026 Vitória Sarinho. Todos os direitos reservados.
           </span>
           <a
             href="/privacidade"

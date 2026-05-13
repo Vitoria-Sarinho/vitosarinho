@@ -227,7 +227,7 @@ export default function Depoimentos() {
           }}
         >
           Os depoimentos foram compartilhados voluntariamente e com autorização, preservando o
-          sigilo ético conforme as normas do CFP — Conselho Federal de Psicologia.
+          sigilo ético conforme as normas do CFP · Conselho Federal de Psicologia.
         </p>
       </div>
       <style>{`
