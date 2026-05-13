@@ -31,6 +31,7 @@ const items: Depo[] = [
 function Card({ d }: { d: Depo }) {
   return (
     <article
+      className="vs-depo-card"
       style={{
         background: "#FFFFFF",
         border: "1px solid rgba(188,141,123,0.2)",
@@ -44,6 +45,7 @@ function Card({ d }: { d: Depo }) {
     >
       <span
         aria-hidden
+        className="vs-depo-quote"
         style={{
           position: "absolute",
           top: 8,
@@ -232,6 +234,11 @@ export default function Depoimentos() {
         @media (min-width: 1024px) {
           .vs-depo-desktop { display: grid !important; }
           .vs-depo-mobile { display: none !important; }
+        }
+        @media (max-width: 767px) {
+          .vs-depo-mobile { overflow: hidden !important; }
+          .vs-depo-card { padding: 28px 24px !important; }
+          .vs-depo-quote { font-size: 64px !important; }
         }
       `}</style>
     </section>
