@@ -126,11 +126,15 @@ export default function Depoimentos() {
   const total = items.length;
   const prev = () => setIdx((i) => (i - 1 + total) % total);
   const next = () => setIdx((i) => (i + 1) % total);
+  const headerRef = useScrollAnimation<HTMLDivElement>(0.15);
+  const desktopRef = useScrollAnimation<HTMLDivElement>(0.1);
+  const mobileRef = useScrollAnimation<HTMLDivElement>(0.1);
+  const noteRef = useScrollAnimation<HTMLParagraphElement>(0.15);
 
   return (
     <section id="depoimentos" className="vs-section" style={{ background: "#FFFFFF" }}>
       <div className="vs-container">
-        <div style={{ textAlign: "center", maxWidth: 640, margin: "0 auto" }}>
+        <div ref={headerRef} className="fade-up" style={{ textAlign: "center", maxWidth: 640, margin: "0 auto" }}>
           <div
             style={{
               fontFamily: "Montserrat, sans-serif",
