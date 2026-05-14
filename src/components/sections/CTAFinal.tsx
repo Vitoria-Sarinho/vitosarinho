@@ -158,7 +158,7 @@ export default function CTAFinal() {
         </div>
 
         <div
-          className="vs-cta-trust"
+          className="vs-cta-trust fade-in delay-400"
           style={{
             marginTop: 48,
             display: "flex",
