@@ -1,4 +1,5 @@
 import Timeline from "./Timeline";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const steps = [
   {
