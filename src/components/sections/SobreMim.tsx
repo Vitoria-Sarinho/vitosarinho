@@ -190,47 +190,60 @@ export default function SobreMim() {
           .vs-sobre-grid { grid-template-columns: 45% 55% !important; gap: 80px !important; }
         }
         @media (max-width: 768px) {
-          .cards-sobre { grid-template-columns: 1fr !important; gap: 0 !important; }
-          .cards-sobre > div { border-radius: 0 !important; padding: 20px 24px !important; text-align: left !important; }
+          .cards-sobre {
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 0 !important;
+            margin-top: 48px !important;
+            border-radius: var(--vs-radius-md) !important;
+            overflow: hidden !important;
+          }
+          .cards-sobre > div {
+            border-radius: 0 !important;
+            padding: 20px 12px !important;
+            text-align: center !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 6px !important;
+          }
+          .cards-sobre > div:nth-child(1),
+          .cards-sobre > div:nth-child(2) {
+            border-right: 1px solid rgba(242,213,187,0.10) !important;
+          }
           .card-desktop { display: none !important; }
           .card-mobile {
             display: flex !important;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
-            gap: 16px;
+            justify-content: center;
+            gap: 6px;
           }
           .card-mobile-value {
             font-family: 'Cormorant Garamond', serif;
             font-weight: 500;
-            font-size: 32px;
+            font-size: 26px;
             color: #FFFFFF;
-            flex-shrink: 0;
-            min-width: 80px;
+            line-height: 1;
           }
-          .card-mobile-sep {
-            display: block;
-            width: 1px;
-            height: 36px;
-            background: rgba(242,213,187,0.2);
-            flex-shrink: 0;
-          }
+          .card-mobile-sep { display: none !important; }
           .card-mobile-desc {
             font-family: 'Montserrat', sans-serif;
             font-weight: 400;
-            font-size: 13px;
+            font-size: 10px;
             color: rgba(242,213,187,0.65);
-            line-height: 1.5;
+            line-height: 1.4;
+            text-align: center;
           }
           .vs-sobre-img { height: 380px !important; border-radius: var(--vs-radius-lg) !important; }
           .vs-sobre-deco {
             display: block !important;
             top: -10px !important;
             left: -10px !important;
-            width: 120px !important;
-            height: 120px !important;
+            width: 110px !important;
+            height: 110px !important;
             border: 2px solid var(--terracota) !important;
-            opacity: 0.7 !important;
-            z-index: -1 !important;
+            z-index: 0 !important;
           }
           .vs-sobre-valores { gap: 12px !important; }
           .vs-sobre-crp { width: 100% !important; justify-content: center !important; }
