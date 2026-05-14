@@ -4,6 +4,9 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const valores = ["Ética profissional", "Escuta ativa", "Sigilo garantido", "Humanização"];
 
 export default function SobreMim() {
+  const photoRef = useScrollAnimation<HTMLDivElement>(0.1);
+  const textRef = useScrollAnimation<HTMLDivElement>(0.1);
+  const cardsRef = useScrollAnimation<HTMLDivElement>(0.1);
   return (
     <section id="sobre" className="vs-section" style={{ background: "#FFFFFF", overflowX: "hidden" }}>
       <div
