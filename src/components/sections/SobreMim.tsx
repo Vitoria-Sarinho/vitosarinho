@@ -69,6 +69,7 @@ export default function SobreMim() {
           </div>
 
           <h2
+            className="fade-up delay-100"
             style={{
               fontFamily: "'Playfair Display', serif",
               fontWeight: 600,
@@ -80,12 +81,12 @@ export default function SobreMim() {
             Cuidar é o meu propósito.
           </h2>
 
-          <p style={{ fontFamily: "Montserrat, sans-serif", fontSize: 16, color: "var(--texto-medio)", marginBottom: 20, lineHeight: 1.8 }}>
+          <p className="fade-up delay-200" style={{ fontFamily: "Montserrat, sans-serif", fontSize: 16, color: "var(--texto-medio)", marginBottom: 20, lineHeight: 1.8 }}>
             Sou Vitória Sarinho, psicóloga clínica e neuropsicóloga com 5 anos de experiência. Meu
             trabalho nasceu de um propósito: criar um espaço onde cada pessoa seja realmente ouvida,
             respeitada e acolhida na sua individualidade.
           </p>
-          <p style={{ fontFamily: "Montserrat, sans-serif", fontSize: 16, color: "var(--texto-medio)", lineHeight: 1.8 }}>
+          <p className="fade-up delay-300" style={{ fontFamily: "Montserrat, sans-serif", fontSize: 16, color: "var(--texto-medio)", lineHeight: 1.8 }}>
             Acredito que o cuidado com a saúde mental transforma vidas, e me comprometo com esse
             processo em cada atendimento, com ética, escuta ativa e técnica baseada em evidências.
           </p>
