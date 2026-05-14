@@ -1,3 +1,5 @@
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 export interface Step {
   num: string;
   title: string;
@@ -5,8 +7,10 @@ export interface Step {
 }
 
 export default function Timeline({ steps }: { steps: Step[] }) {
+  const wrapRef = useScrollAnimation<HTMLDivElement>(0.1);
   return (
     <div
+      ref={wrapRef}
       className="vs-timeline"
       style={{
         display: "grid",
@@ -17,7 +21,11 @@ export default function Timeline({ steps }: { steps: Step[] }) {
       }}
     >
       {steps.map((s, i) => (
-        <div key={s.num} className="vs-step" style={{ position: "relative", display: "flex", gap: 16, alignItems: "flex-start" }}>
+        <div
+          key={s.num}
+          className={`vs-step fade-up delay-${(i + 1) * 100}`}
+          style={{ position: "relative", display: "flex", gap: 16, alignItems: "flex-start" }}
+        >
           <div
             aria-hidden
             className="vs-step-circle"

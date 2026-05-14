@@ -1,7 +1,10 @@
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 const WA_URL =
   "https://wa.me/5581998396041?text=Ol%C3%A1%20Vit%C3%B3ria%2C%20gostaria%20de%20agendar%20uma%20consulta!";
 
 export default function CTAFinal() {
+  const wrapRef = useScrollAnimation<HTMLDivElement>(0.1);
   return (
     <section
       id="contato"
@@ -40,8 +43,9 @@ export default function CTAFinal() {
         }}
       />
 
-      <div className="vs-container" style={{ position: "relative", textAlign: "center" }}>
+      <div ref={wrapRef} className="vs-container" style={{ position: "relative", textAlign: "center" }}>
         <div
+          className="fade-up"
           style={{
             fontFamily: "Montserrat, sans-serif",
             fontWeight: 500,
@@ -55,7 +59,7 @@ export default function CTAFinal() {
           PRONTA PARA COMEÇAR?
         </div>
         <h2
-          className="vs-cta-h2"
+          className="vs-cta-h2 fade-up delay-100"
           style={{
             fontFamily: "'Playfair Display', serif",
             fontWeight: 600,
@@ -71,7 +75,7 @@ export default function CTAFinal() {
           sua jornada de cuidado?
         </h2>
         <p
-          className="vs-cta-sub"
+          className="vs-cta-sub fade-up delay-200"
           style={{
             fontFamily: "Montserrat, sans-serif",
             fontWeight: 300,
@@ -88,7 +92,7 @@ export default function CTAFinal() {
         </p>
 
         <div
-          className="vs-cta-buttons"
+          className="vs-cta-buttons fade-up delay-300"
           style={{
             marginTop: 44,
             display: "flex",
@@ -154,7 +158,7 @@ export default function CTAFinal() {
         </div>
 
         <div
-          className="vs-cta-trust"
+          className="vs-cta-trust fade-in delay-400"
           style={{
             marginTop: 48,
             display: "flex",

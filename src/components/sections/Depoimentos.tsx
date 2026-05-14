@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 interface Depo {
   text: string;
@@ -125,11 +126,15 @@ export default function Depoimentos() {
   const total = items.length;
   const prev = () => setIdx((i) => (i - 1 + total) % total);
   const next = () => setIdx((i) => (i + 1) % total);
+  const headerRef = useScrollAnimation<HTMLDivElement>(0.15);
+  const desktopRef = useScrollAnimation<HTMLDivElement>(0.1);
+  const mobileRef = useScrollAnimation<HTMLDivElement>(0.1);
+  const noteRef = useScrollAnimation<HTMLParagraphElement>(0.15);
 
   return (
     <section id="depoimentos" className="vs-section" style={{ background: "#FFFFFF" }}>
       <div className="vs-container">
-        <div style={{ textAlign: "center", maxWidth: 640, margin: "0 auto" }}>
+        <div ref={headerRef} className="fade-up" style={{ textAlign: "center", maxWidth: 640, margin: "0 auto" }}>
           <div
             style={{
               fontFamily: "Montserrat, sans-serif",
@@ -160,7 +165,7 @@ export default function Depoimentos() {
         </div>
 
         {/* Desktop marquee */}
-        <div className="vs-depo-desktop" style={{ display: "none", marginTop: 56 }}>
+        <div ref={desktopRef} className="vs-depo-desktop fade-in delay-200" style={{ display: "none", marginTop: 56 }}>
           <div className="vs-depo-marquee">
             <div className="vs-depo-track">
               {[...items, ...items].map((d, i) => (
@@ -173,7 +178,7 @@ export default function Depoimentos() {
         </div>
 
         {/* Mobile carousel: 1 card */}
-        <div className="vs-depo-mobile" style={{ marginTop: 48 }}>
+        <div ref={mobileRef} className="vs-depo-mobile fade-in delay-200" style={{ marginTop: 48 }}>
           <Card d={items[idx]} />
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 20, marginTop: 28 }}>
             <button
@@ -238,6 +243,8 @@ export default function Depoimentos() {
         </div>
 
         <p
+          ref={noteRef}
+          className="fade-in delay-300"
           style={{
             fontFamily: "Montserrat, sans-serif",
             fontWeight: 400,

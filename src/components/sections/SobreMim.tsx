@@ -1,8 +1,12 @@
 import heroImg from "@/assets/foto-sobre.jpg";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const valores = ["Ética profissional", "Escuta ativa", "Sigilo garantido", "Humanização"];
 
 export default function SobreMim() {
+  const photoRef = useScrollAnimation<HTMLDivElement>(0.1);
+  const textRef = useScrollAnimation<HTMLDivElement>(0.1);
+  const cardsRef = useScrollAnimation<HTMLDivElement>(0.1);
   return (
     <section id="sobre" className="vs-section" style={{ background: "#FFFFFF", overflowX: "hidden" }}>
       <div
@@ -14,7 +18,7 @@ export default function SobreMim() {
           alignItems: "center",
         }}
       >
-        <div style={{ position: "relative", overflow: "visible" }}>
+        <div ref={photoRef} className="fade-left" style={{ position: "relative", overflow: "visible" }}>
           <div
             aria-hidden
             className="vs-sobre-deco"
@@ -48,8 +52,9 @@ export default function SobreMim() {
           />
         </div>
 
-        <div>
+        <div ref={textRef}>
           <div
+            className="fade-up"
             style={{
               fontFamily: "Montserrat, sans-serif",
               fontWeight: 500,
@@ -64,6 +69,7 @@ export default function SobreMim() {
           </div>
 
           <h2
+            className="fade-up delay-100"
             style={{
               fontFamily: "'Playfair Display', serif",
               fontWeight: 600,
@@ -75,12 +81,12 @@ export default function SobreMim() {
             Cuidar é o meu propósito.
           </h2>
 
-          <p style={{ fontFamily: "Montserrat, sans-serif", fontSize: 16, color: "var(--texto-medio)", marginBottom: 20, lineHeight: 1.8 }}>
+          <p className="fade-up delay-200" style={{ fontFamily: "Montserrat, sans-serif", fontSize: 16, color: "var(--texto-medio)", marginBottom: 20, lineHeight: 1.8 }}>
             Sou Vitória Sarinho, psicóloga clínica e neuropsicóloga com 5 anos de experiência. Meu
             trabalho nasceu de um propósito: criar um espaço onde cada pessoa seja realmente ouvida,
             respeitada e acolhida na sua individualidade.
           </p>
-          <p style={{ fontFamily: "Montserrat, sans-serif", fontSize: 16, color: "var(--texto-medio)", lineHeight: 1.8 }}>
+          <p className="fade-up delay-300" style={{ fontFamily: "Montserrat, sans-serif", fontSize: 16, color: "var(--texto-medio)", lineHeight: 1.8 }}>
             Acredito que o cuidado com a saúde mental transforma vidas, e me comprometo com esse
             processo em cada atendimento, com ética, escuta ativa e técnica baseada em evidências.
           </p>
@@ -88,7 +94,7 @@ export default function SobreMim() {
           <div style={{ height: 1, background: "rgba(199,171,149,0.3)", margin: "28px 0" }} />
 
           <div
-            className="vs-sobre-valores"
+            className="vs-sobre-valores fade-up delay-300"
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
@@ -109,7 +115,7 @@ export default function SobreMim() {
           </div>
 
           <div
-            className="vs-sobre-crp"
+            className="vs-sobre-crp fade-up delay-400"
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -135,7 +141,8 @@ export default function SobreMim() {
 
       {/* Faixa de cards abaixo da seção Sobre Mim */}
       <div
-        className="vs-container cards-sobre"
+        ref={cardsRef}
+        className="vs-container cards-sobre fade-up"
         style={{
           marginTop: 64,
           display: "grid",

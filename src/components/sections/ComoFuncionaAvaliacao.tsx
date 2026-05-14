@@ -1,4 +1,5 @@
 import Timeline from "./Timeline";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const steps = [
   {
@@ -24,10 +25,12 @@ const steps = [
 ];
 
 export default function ComoFuncionaAvaliacao() {
+  const headerRef = useScrollAnimation<HTMLDivElement>(0.15);
+  const introRef = useScrollAnimation<HTMLDivElement>(0.15);
   return (
     <section id="avaliacao" className="vs-section" style={{ background: "var(--nude-fundo)" }}>
       <div className="vs-container">
-        <div style={{ textAlign: "center", maxWidth: 720, margin: "0 auto" }}>
+        <div ref={headerRef} className="fade-up" style={{ textAlign: "center", maxWidth: 720, margin: "0 auto" }}>
           <div
             style={{
               fontFamily: "Montserrat, sans-serif",
@@ -55,6 +58,8 @@ export default function ComoFuncionaAvaliacao() {
         </div>
 
         <div
+          ref={introRef}
+          className="fade-up delay-100"
           style={{
             borderLeft: "3px solid var(--terracota)",
             background: "rgba(242,213,187,0.2)",

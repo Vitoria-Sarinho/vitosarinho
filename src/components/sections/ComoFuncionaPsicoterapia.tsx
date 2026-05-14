@@ -1,4 +1,5 @@
 import Timeline from "./Timeline";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const steps = [
   {
@@ -24,10 +25,11 @@ const steps = [
 ];
 
 export default function ComoFuncionaPsicoterapia() {
+  const headerRef = useScrollAnimation<HTMLDivElement>(0.15);
   return (
     <section id="psicoterapia" className="vs-section" style={{ background: "#FFFFFF" }}>
       <div className="vs-container">
-        <div style={{ textAlign: "center", maxWidth: 640, margin: "0 auto" }}>
+        <div ref={headerRef} className="fade-up" style={{ textAlign: "center", maxWidth: 640, margin: "0 auto" }}>
           <div
             style={{
               fontFamily: "Montserrat, sans-serif",

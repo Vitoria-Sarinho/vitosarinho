@@ -1,19 +1,25 @@
-import type { ReactNode } from "react";
+import type { ReactNode, RefObject } from "react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 function Card({
   icon,
   title,
   text,
   href,
+  refProp,
+  className,
 }: {
   icon: ReactNode;
   title: string;
   text: string;
   href: string;
+  refProp?: RefObject<HTMLElement | null>;
+  className?: string;
 }) {
   return (
     <article
-      className="vs-esp-card"
+      ref={refProp}
+      className={`vs-esp-card ${className ?? ""}`}
       style={{
         background: "#FFFFFF",
         border: "1px solid rgba(188,141,123,0.25)",
@@ -97,10 +103,13 @@ const heart = (
 );
 
 export default function Especialidades() {
+  const headerRef = useScrollAnimation<HTMLDivElement>(0.15);
+  const card1Ref = useScrollAnimation<HTMLElement>(0.15);
+  const card2Ref = useScrollAnimation<HTMLElement>(0.15);
   return (
     <section id="especialidades" className="vs-section" style={{ background: "var(--nude-fundo)" }}>
       <div className="vs-container">
-        <div style={{ textAlign: "center", maxWidth: 640, margin: "0 auto" }}>
+        <div ref={headerRef} className="fade-up" style={{ textAlign: "center", maxWidth: 640, margin: "0 auto" }}>
           <div
             style={{
               fontFamily: "Montserrat, sans-serif",
@@ -149,12 +158,16 @@ export default function Especialidades() {
           }}
         >
           <Card
+            refProp={card1Ref}
+            className="fade-left delay-100"
             icon={brain}
             title="Avaliação Neuropsicológica"
             text="Investigação detalhada das funções cognitivas, emocionais e comportamentais. Geramos um laudo completo que auxilia no diagnóstico e orienta o tratamento mais adequado para você."
             href="#avaliacao"
           />
           <Card
+            refProp={card2Ref}
+            className="fade-right delay-200"
             icon={heart}
             title="Psicoterapia Clínica"
             text="Acompanhamento focado no seu desenvolvimento pessoal e saúde emocional. Utilizando técnicas baseadas em evidências, trabalhamos juntas na construção de bem-estar e autoconhecimento duradouro."

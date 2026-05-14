@@ -99,6 +99,9 @@ export default function Hero() {
             textTransform: "uppercase",
             color: "var(--terracota)",
             marginBottom: 20,
+            opacity: 0,
+            animation: "heroFadeUp 0.7s ease forwards",
+            animationDelay: "0.1s",
           }}
         >
           PSICÓLOGA CLÍNICA · CRP 02/28587
@@ -115,6 +118,9 @@ export default function Hero() {
             lineHeight: 1.1,
             color: "#FFFFFF",
             marginBottom: 22,
+            opacity: 0,
+            animation: "heroFadeUp 0.7s ease forwards",
+            animationDelay: "0.25s",
           }}
         >
           Sua dor acolhida,
@@ -135,6 +141,9 @@ export default function Hero() {
             lineHeight: 1.8,
             color: "rgba(242,213,187,0.75)",
             maxWidth: 460,
+            opacity: 0,
+            animation: "heroFadeUp 0.7s ease forwards",
+            animationDelay: "0.4s",
           }}
         >
           Atendimento humanizado e especializado em Neuropsicologia e Psicoterapia Clínica para
@@ -148,6 +157,9 @@ export default function Hero() {
             order: 4,
             position: "relative",
             overflow: "visible",
+            opacity: 0,
+            animation: "heroFadeRight 0.9s ease forwards",
+            animationDelay: "0.2s",
           }}
         >
           {/* Decorative halos — desktop only */}
@@ -271,6 +283,9 @@ export default function Hero() {
             flexWrap: "wrap",
             gap: 14,
             marginTop: 36,
+            opacity: 0,
+            animation: "heroFadeUp 0.7s ease forwards",
+            animationDelay: "0.55s",
           }}
         >
           <a
@@ -342,6 +357,9 @@ export default function Hero() {
             fontWeight: 500,
             fontSize: 14,
             color: "rgba(242,213,187,0.75)",
+            opacity: 0,
+            animation: "heroFadeUp 0.7s ease forwards",
+            animationDelay: "0.7s",
           }}
         >
           {BADGES.map((t) => (
@@ -367,6 +385,9 @@ export default function Hero() {
             flexDirection: "column",
             alignItems: "center",
             gap: 0,
+            opacity: 0,
+            animation: "heroFadeUp 0.7s ease forwards",
+            animationDelay: "0.6s",
           }}
         >
           <div
