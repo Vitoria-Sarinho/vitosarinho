@@ -59,7 +59,7 @@ export default function CTAFinal() {
           PRONTA PARA COMEÇAR?
         </div>
         <h2
-          className="vs-cta-h2"
+          className="vs-cta-h2 fade-up delay-100"
           style={{
             fontFamily: "'Playfair Display', serif",
             fontWeight: 600,
