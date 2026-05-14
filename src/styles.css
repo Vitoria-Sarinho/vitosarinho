@@ -252,3 +252,12 @@ body.vs-site {
     transform: none !important;
   }
 }
+
+/* Trigger child fade animations when parent gets .animate-in */
+.animate-in .fade-up,
+.animate-in .fade-in,
+.animate-in .fade-left,
+.animate-in .fade-right {
+  opacity: 1;
+  transform: translate(0, 0);
+}
