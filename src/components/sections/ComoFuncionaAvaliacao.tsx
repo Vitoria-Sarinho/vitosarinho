@@ -58,6 +58,8 @@ export default function ComoFuncionaAvaliacao() {
         </div>
 
         <div
+          ref={introRef}
+          className="fade-up delay-100"
           style={{
             borderLeft: "3px solid var(--terracota)",
             background: "rgba(242,213,187,0.2)",
