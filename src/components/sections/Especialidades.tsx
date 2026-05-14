@@ -1,19 +1,25 @@
-import type { ReactNode } from "react";
+import type { ReactNode, RefObject } from "react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 function Card({
   icon,
   title,
   text,
   href,
+  refProp,
+  className,
 }: {
   icon: ReactNode;
   title: string;
   text: string;
   href: string;
+  refProp?: RefObject<HTMLElement | null>;
+  className?: string;
 }) {
   return (
     <article
-      className="vs-esp-card"
+      ref={refProp}
+      className={`vs-esp-card ${className ?? ""}`}
       style={{
         background: "#FFFFFF",
         border: "1px solid rgba(188,141,123,0.25)",
