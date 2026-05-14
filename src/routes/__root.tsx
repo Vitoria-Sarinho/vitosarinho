@@ -72,14 +72,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Vitória Sarinho — Psicóloga e Neuropsicóloga" },
+      { title: "Vitória Sarinho - Psicóloga e Neuropsicóloga" },
       {
         name: "description",
         content:
           "Atendimento humanizado em Psicoterapia Clínica e Avaliação Neuropsicológica online para todo o Brasil. Vitória Sarinho — CRP 02/28587.",
       },
       { name: "author", content: "Vitória Sarinho" },
-      { property: "og:title", content: "Vitória Sarinho — Psicóloga Clínica e Neuropsicóloga" },
+      { property: "og:title", content: "Vitória Sarinho - Psicóloga e Neuropsicóloga" },
       {
         property: "og:description",
         content:
@@ -89,6 +89,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:locale", content: "pt_BR" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#400F0F" },
+      { name: "twitter:title", content: "Vitória Sarinho - Psicóloga e Neuropsicóloga" },
+      { name: "description", content: "Sou Vitória Sarinho, psicóloga clínica e neuropsicóloga com 5 anos de experiência." },
+      { property: "og:description", content: "Sou Vitória Sarinho, psicóloga clínica e neuropsicóloga com 5 anos de experiência." },
+      { name: "twitter:description", content: "Sou Vitória Sarinho, psicóloga clínica e neuropsicóloga com 5 anos de experiência." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/81de1926-8563-4769-9fab-38d344ffb5b6/id-preview-70977bd0--01ccccb7-807c-422b-a023-bc3ff4a28ba5.lovable.app-1778800046309.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/81de1926-8563-4769-9fab-38d344ffb5b6/id-preview-70977bd0--01ccccb7-807c-422b-a023-bc3ff4a28ba5.lovable.app-1778800046309.png" },
     ],
     links: [
       { rel: "icon", type: "image/png", href: "/favicon.png" },
