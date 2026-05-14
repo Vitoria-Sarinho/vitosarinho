@@ -357,6 +357,9 @@ export default function Hero() {
             fontWeight: 500,
             fontSize: 14,
             color: "rgba(242,213,187,0.75)",
+            opacity: 0,
+            animation: "heroFadeUp 0.7s ease forwards",
+            animationDelay: "0.7s",
           }}
         >
           {BADGES.map((t) => (
