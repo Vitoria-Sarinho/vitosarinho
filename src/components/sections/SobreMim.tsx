@@ -141,34 +141,94 @@ export default function SobreMim() {
         }}
       >
         {/* Card 1 */}
-        <div style={{ background: "var(--marrom-escuro)", borderRadius: "var(--vs-radius-md)", padding: "28px 24px", textAlign: "center" }}>
-          <div style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500, fontSize: 42, color: "#fff", marginBottom: 6 }}>5 anos</div>
-          <div style={{ fontFamily: "Montserrat, sans-serif", fontSize: 13, color: "rgba(242,213,187,0.8)" }}>de experiência clínica</div>
+        <div className="metric-card" style={{ background: "var(--marrom-escuro)", borderRadius: "var(--vs-radius-md)", padding: "28px 24px", textAlign: "center" }}>
+          <div className="card-desktop">
+            <div style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500, fontSize: 42, color: "#fff", marginBottom: 6 }}>5 anos</div>
+            <div style={{ fontFamily: "Montserrat, sans-serif", fontSize: 13, color: "rgba(242,213,187,0.8)" }}>de experiência clínica</div>
+          </div>
+          <div className="card-mobile">
+            <span className="card-mobile-value">5 anos</span>
+            <span className="card-mobile-sep" />
+            <span className="card-mobile-desc">de experiência clínica</span>
+          </div>
         </div>
 
         {/* Card 2 */}
-        <div style={{ background: "var(--marrom)", borderRadius: "var(--vs-radius-md)", padding: "28px 24px", textAlign: "center" }}>
-          <div style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500, fontSize: 42, color: "#fff", marginBottom: 6 }}>Online</div>
-          <div style={{ fontFamily: "Montserrat, sans-serif", fontSize: 13, color: "rgba(242,213,187,0.8)" }}>Atendimento para todo o Brasil</div>
+        <div className="metric-card" style={{ background: "var(--marrom)", borderRadius: "var(--vs-radius-md)", padding: "28px 24px", textAlign: "center" }}>
+          <div className="card-desktop">
+            <div style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500, fontSize: 42, color: "#fff", marginBottom: 6 }}>Online</div>
+            <div style={{ fontFamily: "Montserrat, sans-serif", fontSize: 13, color: "rgba(242,213,187,0.8)" }}>Atendimento para todo o Brasil</div>
+          </div>
+          <div className="card-mobile">
+            <span className="card-mobile-value">Online</span>
+            <span className="card-mobile-sep" />
+            <span className="card-mobile-desc">Atendimento para todo o Brasil</span>
+          </div>
         </div>
 
         {/* Card 3 */}
-        <div style={{ background: "var(--marrom-medio)", borderRadius: "var(--vs-radius-md)", padding: "28px 24px", textAlign: "center" }}>
-          <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 600, fontSize: 11, color: "var(--nude-claro)", letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: 4 }}>CRP</div>
-          <div style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500, fontSize: 42, color: "#fff", marginBottom: 4 }}>02/28587</div>
-          <div style={{ fontFamily: "Montserrat, sans-serif", fontSize: 12, color: "rgba(242,213,187,0.75)" }}>Psicóloga registrada</div>
+        <div className="metric-card" style={{ background: "var(--marrom-medio)", borderRadius: "var(--vs-radius-md)", padding: "28px 24px", textAlign: "center" }}>
+          <div className="card-desktop">
+            <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 600, fontSize: 11, color: "var(--nude-claro)", letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: 4 }}>CRP</div>
+            <div style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500, fontSize: 42, color: "#fff", marginBottom: 4 }}>02/28587</div>
+            <div style={{ fontFamily: "Montserrat, sans-serif", fontSize: 12, color: "rgba(242,213,187,0.75)" }}>Psicóloga registrada</div>
+          </div>
+          <div className="card-mobile">
+            <span className="card-mobile-value">CRP</span>
+            <span className="card-mobile-sep" />
+            <span className="card-mobile-desc">02/28587 · Psicóloga registrada</span>
+          </div>
         </div>
       </div>
 
       <style>{`
+        .card-mobile { display: none; }
         @media (min-width: 1024px) {
           .vs-sobre-grid { grid-template-columns: 45% 55% !important; gap: 80px !important; }
         }
         @media (max-width: 768px) {
           .cards-sobre { grid-template-columns: 1fr !important; gap: 0 !important; }
-          .cards-sobre > div { border-radius: 0 !important; padding: 28px 24px !important; }
+          .cards-sobre > div { border-radius: 0 !important; padding: 20px 24px !important; text-align: left !important; }
+          .card-desktop { display: none !important; }
+          .card-mobile {
+            display: flex !important;
+            flex-direction: row;
+            align-items: center;
+            gap: 16px;
+          }
+          .card-mobile-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: 32px;
+            color: #FFFFFF;
+            flex-shrink: 0;
+            min-width: 80px;
+          }
+          .card-mobile-sep {
+            display: block;
+            width: 1px;
+            height: 36px;
+            background: rgba(242,213,187,0.2);
+            flex-shrink: 0;
+          }
+          .card-mobile-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 13px;
+            color: rgba(242,213,187,0.65);
+            line-height: 1.5;
+          }
           .vs-sobre-img { height: 380px !important; border-radius: var(--vs-radius-lg) !important; }
-          .vs-sobre-deco { display: none !important; }
+          .vs-sobre-deco {
+            display: block !important;
+            top: -10px !important;
+            left: -10px !important;
+            width: 120px !important;
+            height: 120px !important;
+            border: 2px solid var(--terracota) !important;
+            opacity: 0.7 !important;
+            z-index: -1 !important;
+          }
           .vs-sobre-valores { gap: 12px !important; }
           .vs-sobre-crp { width: 100% !important; justify-content: center !important; }
         }
