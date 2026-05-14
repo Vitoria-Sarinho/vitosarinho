@@ -14,7 +14,7 @@ export default function SobreMim() {
           alignItems: "center",
         }}
       >
-        <div style={{ position: "relative" }}>
+        <div style={{ position: "relative", overflow: "visible" }}>
           <div
             aria-hidden
             className="vs-sobre-deco"
@@ -25,7 +25,7 @@ export default function SobreMim() {
               width: 200,
               height: 200,
               border: "2px solid var(--terracota)",
-              zIndex: 0,
+              zIndex: -1,
             }}
           />
           <img
