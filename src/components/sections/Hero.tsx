@@ -99,6 +99,9 @@ export default function Hero() {
             textTransform: "uppercase",
             color: "var(--terracota)",
             marginBottom: 20,
+            opacity: 0,
+            animation: "heroFadeUp 0.7s ease forwards",
+            animationDelay: "0.1s",
           }}
         >
           PSICÓLOGA CLÍNICA · CRP 02/28587
