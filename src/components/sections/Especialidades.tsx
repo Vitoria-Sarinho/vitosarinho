@@ -103,10 +103,13 @@ const heart = (
 );
 
 export default function Especialidades() {
+  const headerRef = useScrollAnimation<HTMLDivElement>(0.15);
+  const card1Ref = useScrollAnimation<HTMLElement>(0.15);
+  const card2Ref = useScrollAnimation<HTMLElement>(0.15);
   return (
     <section id="especialidades" className="vs-section" style={{ background: "var(--nude-fundo)" }}>
       <div className="vs-container">
-        <div style={{ textAlign: "center", maxWidth: 640, margin: "0 auto" }}>
+        <div ref={headerRef} className="fade-up" style={{ textAlign: "center", maxWidth: 640, margin: "0 auto" }}>
           <div
             style={{
               fontFamily: "Montserrat, sans-serif",
@@ -155,12 +158,16 @@ export default function Especialidades() {
           }}
         >
           <Card
+            refProp={card1Ref}
+            className="fade-left delay-100"
             icon={brain}
             title="Avaliação Neuropsicológica"
             text="Investigação detalhada das funções cognitivas, emocionais e comportamentais. Geramos um laudo completo que auxilia no diagnóstico e orienta o tratamento mais adequado para você."
             href="#avaliacao"
           />
           <Card
+            refProp={card2Ref}
+            className="fade-right delay-200"
             icon={heart}
             title="Psicoterapia Clínica"
             text="Acompanhamento focado no seu desenvolvimento pessoal e saúde emocional. Utilizando técnicas baseadas em evidências, trabalhamos juntas na construção de bem-estar e autoconhecimento duradouro."
