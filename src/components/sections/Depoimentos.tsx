@@ -243,6 +243,8 @@ export default function Depoimentos() {
         </div>
 
         <p
+          ref={noteRef}
+          className="fade-in delay-300"
           style={{
             fontFamily: "Montserrat, sans-serif",
             fontWeight: 400,
