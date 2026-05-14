@@ -1,4 +1,5 @@
 import heroImg from "@/assets/foto-sobre.jpg";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const valores = ["Ética profissional", "Escuta ativa", "Sigilo garantido", "Humanização"];
 
