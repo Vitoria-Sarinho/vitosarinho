@@ -153,7 +153,7 @@ export default function Hero() {
           {/* Decorative halos — desktop only */}
           <div
             aria-hidden
-            className="vs-hero-photo-deco"
+            className="vs-hero-photo-deco vs-hero-photo-deco-blob"
             style={{
               position: "absolute",
               top: "50%",
@@ -171,7 +171,7 @@ export default function Hero() {
           />
           <div
             aria-hidden
-            className="vs-hero-photo-deco"
+            className="vs-hero-photo-deco vs-hero-photo-deco-ring"
             style={{
               position: "absolute",
               top: "50%",
@@ -188,7 +188,7 @@ export default function Hero() {
           />
           <div
             aria-hidden
-            className="vs-hero-photo-deco"
+            className="vs-hero-photo-deco vs-hero-photo-deco-accent"
             style={{
               position: "absolute",
               bottom: -40,
