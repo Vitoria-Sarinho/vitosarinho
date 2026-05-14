@@ -22,10 +22,13 @@ export default function SobreMim() {
               position: "absolute",
               top: -16,
               left: -16,
-              width: 200,
-              height: 200,
+              width: 180,
+              height: 180,
               border: "2px solid var(--terracota)",
-              zIndex: -1,
+              borderRadius: 0,
+              background: "transparent",
+              pointerEvents: "none",
+              zIndex: 0,
             }}
           />
           <img
