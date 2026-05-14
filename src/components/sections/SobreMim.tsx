@@ -4,7 +4,7 @@ const valores = ["Ética profissional", "Escuta ativa", "Sigilo garantido", "Hum
 
 export default function SobreMim() {
   return (
-    <section id="sobre" className="vs-section" style={{ background: "#FFFFFF" }}>
+    <section id="sobre" className="vs-section" style={{ background: "#FFFFFF", overflowX: "hidden" }}>
       <div
         className="vs-container vs-sobre-grid"
         style={{
