@@ -115,7 +115,7 @@ export default function SobreMim() {
           </div>
 
           <div
-            className="vs-sobre-crp"
+            className="vs-sobre-crp fade-up delay-400"
             style={{
               display: "inline-flex",
               alignItems: "center",
