@@ -165,7 +165,7 @@ export default function Depoimentos() {
         </div>
 
         {/* Desktop marquee */}
-        <div className="vs-depo-desktop" style={{ display: "none", marginTop: 56 }}>
+        <div ref={desktopRef} className="vs-depo-desktop fade-in delay-200" style={{ display: "none", marginTop: 56 }}>
           <div className="vs-depo-marquee">
             <div className="vs-depo-track">
               {[...items, ...items].map((d, i) => (
