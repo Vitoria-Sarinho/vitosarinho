@@ -428,7 +428,6 @@ export default function Hero() {
         /* Mobile (<= 768px) */
         @media (max-width: 768px) {
           .vs-hero-blob,
-          .vs-hero-photo-deco,
           .vs-hero-photo-vignette-left,
           .vs-hero-photo-vignette-right,
           .vs-hero-photo-vignette-top {
@@ -436,6 +435,35 @@ export default function Hero() {
           }
           .vs-hero-photo {
             margin: 24px 0 !important;
+            position: relative !important;
+            overflow: visible !important;
+          }
+          #inicio {
+            overflow-x: hidden !important;
+          }
+          .vs-hero-photo-deco-blob {
+            display: block !important;
+            width: 300px !important;
+            height: 300px !important;
+            top: -30px !important;
+            right: -20px !important;
+            transform: none !important;
+          }
+          .vs-hero-photo-deco-ring {
+            display: block !important;
+            width: 340px !important;
+            height: 340px !important;
+            top: -50px !important;
+            right: -40px !important;
+            transform: none !important;
+          }
+          .vs-hero-photo-deco-accent {
+            display: block !important;
+            width: 120px !important;
+            height: 120px !important;
+            bottom: -20px !important;
+            right: -10px !important;
+            top: auto !important;
           }
           .vs-hero-img {
             width: 100% !important;
