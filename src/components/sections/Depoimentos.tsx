@@ -178,7 +178,7 @@ export default function Depoimentos() {
         </div>
 
         {/* Mobile carousel: 1 card */}
-        <div className="vs-depo-mobile" style={{ marginTop: 48 }}>
+        <div ref={mobileRef} className="vs-depo-mobile fade-in delay-200" style={{ marginTop: 48 }}>
           <Card d={items[idx]} />
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 20, marginTop: 28 }}>
             <button
