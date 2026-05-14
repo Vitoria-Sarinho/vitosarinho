@@ -385,6 +385,9 @@ export default function Hero() {
             flexDirection: "column",
             alignItems: "center",
             gap: 0,
+            opacity: 0,
+            animation: "heroFadeUp 0.7s ease forwards",
+            animationDelay: "0.6s",
           }}
         >
           <div
