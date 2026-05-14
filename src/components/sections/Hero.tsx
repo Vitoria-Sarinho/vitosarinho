@@ -283,6 +283,9 @@ export default function Hero() {
             flexWrap: "wrap",
             gap: 14,
             marginTop: 36,
+            opacity: 0,
+            animation: "heroFadeUp 0.7s ease forwards",
+            animationDelay: "0.55s",
           }}
         >
           <a
