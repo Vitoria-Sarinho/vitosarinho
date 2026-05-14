@@ -159,11 +159,17 @@ export default function Depoimentos() {
           </p>
         </div>
 
-        {/* Desktop grid: 3 cards */}
-        <div className="vs-depo-desktop" style={{ display: "none", gridTemplateColumns: "1fr 1fr 1fr", gap: 28, marginTop: 56 }}>
-          {items.map((d) => (
-            <Card key={d.name} d={d} />
-          ))}
+        {/* Desktop marquee */}
+        <div className="vs-depo-desktop" style={{ display: "none", marginTop: 56 }}>
+          <div className="vs-depo-marquee">
+            <div className="vs-depo-track">
+              {[...items, ...items].map((d, i) => (
+                <div key={`${d.name}-${i}`} className="vs-depo-slide">
+                  <Card d={d} />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Mobile carousel: 1 card */}
