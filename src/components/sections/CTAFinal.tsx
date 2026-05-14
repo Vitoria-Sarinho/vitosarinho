@@ -43,8 +43,9 @@ export default function CTAFinal() {
         }}
       />
 
-      <div className="vs-container" style={{ position: "relative", textAlign: "center" }}>
+      <div ref={wrapRef} className="vs-container" style={{ position: "relative", textAlign: "center" }}>
         <div
+          className="fade-up"
           style={{
             fontFamily: "Montserrat, sans-serif",
             fontWeight: 500,
