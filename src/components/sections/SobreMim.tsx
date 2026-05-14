@@ -141,7 +141,8 @@ export default function SobreMim() {
 
       {/* Faixa de cards abaixo da seção Sobre Mim */}
       <div
-        className="vs-container cards-sobre"
+        ref={cardsRef}
+        className="vs-container cards-sobre fade-up"
         style={{
           marginTop: 64,
           display: "grid",
