@@ -1,0 +1,8 @@
+# Vitória Sarinho — Psicóloga e Neuropsicóloga
+
+> Site institucional da psicóloga clínica e neuropsicóloga Vitória Sarinho (CRP 02/28587), com atendimento humanizado online para todo o Brasil em Psicoterapia Clínica e Avaliação Neuropsicológica.
+
+## Pages
+
+- [Home](/): Apresentação, especialidades (psicoterapia e avaliação neuropsicológica), processo de atendimento, depoimentos e contato.
+- [Política de Privacidade](/privacidade): Tratamento de dados pessoais em conformidade com LGPD, Marco Civil da Internet e Código de Ética do Psicólogo.
