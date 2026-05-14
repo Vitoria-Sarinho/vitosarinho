@@ -3,6 +3,16 @@ import heroImg from "@/assets/vitoria-hero.png";
 const WA_URL =
   "https://wa.me/5581998396041?text=Ol%C3%A1%20Vit%C3%B3ria%2C%20gostaria%20de%20agendar%20uma%20consulta!";
 
+const BADGES = ["5 anos de experiência", "Laudo Neuropsicológico", "Atendimento online · Todo o Brasil"];
+
+function CheckIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 12 12" fill="none" style={{ flexShrink: 0 }}>
+      <path d="M2 6.5L4.8 9 10 3" stroke="var(--terracota)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export default function Hero() {
   return (
     <section
@@ -10,7 +20,6 @@ export default function Hero() {
       style={{
         background: "var(--marrom-escuro)",
         position: "relative",
-        maxHeight: "88vh",
         overflow: "hidden",
         marginTop: "-72px",
         paddingTop: 110,
@@ -19,6 +28,7 @@ export default function Hero() {
     >
       <div
         aria-hidden
+        className="vs-hero-blob"
         style={{
           position: "absolute",
           top: -60,
@@ -35,6 +45,7 @@ export default function Hero() {
       />
       <div
         aria-hidden
+        className="vs-hero-blob"
         style={{
           position: "absolute",
           top: 40,
@@ -51,6 +62,7 @@ export default function Hero() {
       />
       <div
         aria-hidden
+        className="vs-hero-blob"
         style={{
           position: "absolute",
           top: 180,
@@ -66,157 +78,82 @@ export default function Hero() {
       />
 
       <div
-        className="vs-container vs-hero-grid"
+        className="vs-hero-grid vs-container"
         style={{
           position: "relative",
           zIndex: 2,
-          display: "grid",
-          gridTemplateColumns: "1fr",
-          gap: 40,
-          alignItems: "center",
+          display: "flex",
+          flexDirection: "column",
+          gap: 0,
         }}
       >
-        {/* Text column */}
-        <div className="vs-hero-text" style={{ order: 1 }}>
-          <div
-            style={{
-              fontFamily: "Montserrat, sans-serif",
-              fontWeight: 500,
-              fontSize: 11,
-              letterSpacing: "0.2em",
-              textTransform: "uppercase",
-              color: "var(--terracota)",
-              marginBottom: 20,
-            }}
-          >
-            PSICÓLOGA CLÍNICA · CRP 02/28587
-          </div>
-
-          <h1
-            style={{
-              fontFamily: "'Playfair Display', serif",
-              fontWeight: 500,
-              fontSize: "clamp(36px, 5.5vw, 54px)",
-              lineHeight: 1.1,
-              color: "#FFFFFF",
-              marginBottom: 22,
-            }}
-          >
-            Sua dor acolhida,
-            <br />
-            ouvida
-            <br />
-            e tratada.
-          </h1>
-
-          <p
-            style={{
-              fontFamily: "Montserrat, sans-serif",
-              fontWeight: 300,
-              fontSize: 17,
-              lineHeight: 1.8,
-              color: "rgba(242,213,187,0.75)",
-              maxWidth: 460,
-            }}
-          >
-            Atendimento humanizado e especializado em Neuropsicologia e Psicoterapia Clínica para
-            mulheres que buscam bem-estar e autoconhecimento.
-          </p>
-
-          <div className="vs-hero-cta" style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 36 }}>
-            <a
-              href={WA_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Falar com especialista pelo WhatsApp"
-              style={{
-                background: "var(--terracota)",
-                color: "#fff",
-                padding: "15px 34px",
-                borderRadius: "var(--vs-radius-md)",
-                fontFamily: "Montserrat, sans-serif",
-                fontWeight: 500,
-                fontSize: 15,
-                textDecoration: "none",
-                transition: "all 0.2s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = "#B5694F";
-                e.currentTarget.style.transform = "translateY(-1px)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = "var(--terracota)";
-                e.currentTarget.style.transform = "translateY(0)";
-              }}
-            >
-              Falar com especialista
-            </a>
-            <a
-              href="#sobre"
-              aria-label="Saiba mais sobre Vitória Sarinho"
-              style={{
-                border: "1.5px solid rgba(242,213,187,0.35)",
-                color: "rgba(242,213,187,0.85)",
-                padding: "15px 34px",
-                borderRadius: "var(--vs-radius-md)",
-                fontFamily: "Montserrat, sans-serif",
-                fontWeight: 500,
-                fontSize: 15,
-                textDecoration: "none",
-                background: "transparent",
-                transition: "all 0.2s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = "rgba(242,213,187,0.07)";
-                e.currentTarget.style.borderColor = "rgba(242,213,187,0.6)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = "transparent";
-                e.currentTarget.style.borderColor = "rgba(242,213,187,0.35)";
-              }}
-            >
-              Sobre mim
-            </a>
-          </div>
-
-          <div
-            style={{
-              marginTop: 28,
-              display: "flex",
-              flexWrap: "wrap",
-              gap: 20,
-              alignItems: "center",
-              fontFamily: "Montserrat, sans-serif",
-              fontSize: 13,
-              color: "rgba(242,213,187,0.55)",
-            }}
-          >
-            {["5 anos de experiência", "Laudo Neuropsicológico", "Todo o Brasil"].map((t, i) => (
-              <span key={t} style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path d="M2 6.5L4.8 9 10 3" stroke="var(--terracota)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                {t}
-                {i < 2 && <span style={{ marginLeft: 8, color: "rgba(242,213,187,0.3)" }}>·</span>}
-              </span>
-            ))}
-          </div>
+        {/* 1. Eyebrow */}
+        <div
+          className="vs-hero-eyebrow"
+          style={{
+            order: 1,
+            fontFamily: "Montserrat, sans-serif",
+            fontWeight: 500,
+            fontSize: 11,
+            letterSpacing: "0.2em",
+            textTransform: "uppercase",
+            color: "var(--terracota)",
+            marginBottom: 20,
+          }}
+        >
+          PSICÓLOGA CLÍNICA · CRP 02/28587
         </div>
 
-        {/* Photo column */}
+        {/* 2. H1 */}
+        <h1
+          className="vs-hero-h1"
+          style={{
+            order: 2,
+            fontFamily: "'Playfair Display', serif",
+            fontWeight: 500,
+            fontSize: "clamp(36px, 5.5vw, 54px)",
+            lineHeight: 1.1,
+            color: "#FFFFFF",
+            marginBottom: 22,
+          }}
+        >
+          Sua dor acolhida,
+          <br />
+          ouvida
+          <br />
+          e tratada.
+        </h1>
+
+        {/* 3. Subtitle */}
+        <p
+          className="vs-hero-subtitle"
+          style={{
+            order: 3,
+            fontFamily: "Montserrat, sans-serif",
+            fontWeight: 300,
+            fontSize: 17,
+            lineHeight: 1.8,
+            color: "rgba(242,213,187,0.75)",
+            maxWidth: 460,
+          }}
+        >
+          Atendimento humanizado e especializado em Neuropsicologia e Psicoterapia Clínica para
+          mulheres que buscam bem-estar e autoconhecimento.
+        </p>
+
+        {/* 4. Photo */}
         <div
           className="vs-hero-photo"
           style={{
+            order: 4,
             position: "relative",
-            order: 2,
-            height: 480,
             overflow: "visible",
-            borderRadius: "0 var(--radius-xl) var(--radius-xl) 0",
           }}
         >
-          {/* Decorative halo (main circle) */}
+          {/* Decorative halos — desktop only */}
           <div
             aria-hidden
+            className="vs-hero-photo-deco"
             style={{
               position: "absolute",
               top: "50%",
@@ -232,9 +169,9 @@ export default function Hero() {
               zIndex: -1,
             }}
           />
-          {/* Decorative outer ring */}
           <div
             aria-hidden
+            className="vs-hero-photo-deco"
             style={{
               position: "absolute",
               top: "50%",
@@ -249,9 +186,9 @@ export default function Hero() {
               zIndex: -1,
             }}
           />
-          {/* Bottom-right accent */}
           <div
             aria-hidden
+            className="vs-hero-photo-deco"
             style={{
               position: "absolute",
               bottom: -40,
@@ -267,6 +204,7 @@ export default function Hero() {
             }}
           />
           <img
+            className="vs-hero-img"
             src={heroImg}
             alt="Vitória Sarinho, psicóloga clínica e neuropsicóloga, em seu consultório"
             style={{
@@ -282,6 +220,7 @@ export default function Hero() {
           />
           <div
             aria-hidden
+            className="vs-hero-photo-vignette-left"
             style={{
               position: "absolute",
               left: 0,
@@ -295,6 +234,7 @@ export default function Hero() {
           />
           <div
             aria-hidden
+            className="vs-hero-photo-vignette-right"
             style={{
               position: "absolute",
               top: 0,
@@ -308,6 +248,7 @@ export default function Hero() {
           />
           <div
             aria-hidden
+            className="vs-hero-photo-vignette-top"
             style={{
               position: "absolute",
               top: 0,
@@ -319,79 +260,251 @@ export default function Hero() {
               zIndex: 2,
             }}
           />
-
-        </div>
-      </div>
-
-      {/* Jung quote — full width below */}
-      <div style={{
-        position: "relative",
-        zIndex: 2,
-        width: '100%',
-        padding: '40px 24px 48px',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: '0',
-      }}>
-        <div style={{
-          fontFamily: "'Playfair Display', serif",
-          fontSize: '72px',
-          lineHeight: '0.6',
-          color: 'rgba(199, 122, 99, 0.5)',
-          marginBottom: '20px',
-          userSelect: 'none',
-        }}>
-          "
         </div>
 
-        <blockquote style={{
-          fontFamily: "'Cormorant Garamond', serif",
-          fontStyle: 'italic',
-          fontWeight: 300,
-          fontSize: 'clamp(20px, 2.4vw, 26px)',
-          letterSpacing: '0.02em',
-          lineHeight: '1.6',
-          color: 'rgba(242, 213, 187, 0.90)',
-          textAlign: 'center',
-          maxWidth: '680px',
-          margin: '0',
-          padding: '0',
-          border: 'none',
-        }}>
-          Conheça todas as teorias, domine todas as técnicas, mas ao tocar
-          uma alma humana, seja apenas outra alma humana.
-        </blockquote>
+        {/* 5. CTA buttons */}
+        <div
+          className="vs-hero-cta"
+          style={{
+            order: 5,
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 14,
+            marginTop: 36,
+          }}
+        >
+          <a
+            href={WA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Falar com especialista pelo WhatsApp"
+            style={{
+              background: "var(--terracota)",
+              color: "#fff",
+              padding: "15px 34px",
+              borderRadius: "var(--vs-radius-md)",
+              fontFamily: "Montserrat, sans-serif",
+              fontWeight: 500,
+              fontSize: 15,
+              textDecoration: "none",
+              transition: "all 0.2s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#B5694F";
+              e.currentTarget.style.transform = "translateY(-1px)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "var(--terracota)";
+              e.currentTarget.style.transform = "translateY(0)";
+            }}
+          >
+            Falar com especialista
+          </a>
+          <a
+            href="#sobre"
+            aria-label="Saiba mais sobre Vitória Sarinho"
+            style={{
+              border: "1.5px solid rgba(242,213,187,0.35)",
+              color: "rgba(242,213,187,0.85)",
+              padding: "15px 34px",
+              borderRadius: "var(--vs-radius-md)",
+              fontFamily: "Montserrat, sans-serif",
+              fontWeight: 500,
+              fontSize: 15,
+              textDecoration: "none",
+              background: "transparent",
+              transition: "all 0.2s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "rgba(242,213,187,0.07)";
+              e.currentTarget.style.borderColor = "rgba(242,213,187,0.6)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "transparent";
+              e.currentTarget.style.borderColor = "rgba(242,213,187,0.35)";
+            }}
+          >
+            Sobre mim
+          </a>
+        </div>
 
-        <div style={{
-          width: '48px',
-          height: '1px',
-          background: 'rgba(198, 122, 99, 0.4)',
-          margin: '20px auto',
-        }} />
+        {/* 6. Trust badges */}
+        <div
+          className="vs-hero-badges"
+          style={{
+            order: 6,
+            marginTop: 28,
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 20,
+            alignItems: "center",
+            fontFamily: "Montserrat, sans-serif",
+            fontSize: 13,
+            color: "rgba(242,213,187,0.55)",
+          }}
+        >
+          {BADGES.map((t, i) => (
+            <span key={t} className="vs-hero-badge" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
+              <CheckIcon />
+              {t}
+              {i < BADGES.length - 1 && (
+                <span className="vs-hero-badge-sep" style={{ marginLeft: 8, color: "rgba(242,213,187,0.3)" }}>·</span>
+              )}
+            </span>
+          ))}
+        </div>
 
-        <cite style={{
-          fontFamily: "'Montserrat', sans-serif",
-          fontStyle: 'normal',
-          fontWeight: 500,
-          fontSize: '13px',
-          letterSpacing: '0.18em',
-          textTransform: 'uppercase',
-          color: 'var(--terracota)',
-        }}>
-          Carl Jung
-        </cite>
+        {/* 7. Jung quote */}
+        <div
+          className="vs-hero-jung"
+          style={{
+            order: 7,
+            width: "100%",
+            padding: "40px 24px 48px",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: 0,
+          }}
+        >
+          <div
+            className="vs-hero-jung-quote"
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontSize: 72,
+              lineHeight: 0.6,
+              color: "rgba(199, 122, 99, 0.5)",
+              marginBottom: 20,
+              userSelect: "none",
+            }}
+          >
+            "
+          </div>
+          <blockquote
+            className="vs-hero-jung-text"
+            style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontStyle: "italic",
+              fontWeight: 300,
+              fontSize: "clamp(20px, 2.4vw, 26px)",
+              letterSpacing: "0.02em",
+              lineHeight: 1.6,
+              color: "rgba(242, 213, 187, 0.90)",
+              textAlign: "center",
+              maxWidth: 680,
+              margin: 0,
+              padding: 0,
+              border: "none",
+            }}
+          >
+            Conheça todas as teorias, domine todas as técnicas, mas ao tocar
+            uma alma humana, seja apenas outra alma humana.
+          </blockquote>
+          <div
+            style={{
+              width: 48,
+              height: 1,
+              background: "rgba(198, 122, 99, 0.4)",
+              margin: "20px auto",
+            }}
+          />
+          <cite
+            style={{
+              fontFamily: "'Montserrat', sans-serif",
+              fontStyle: "normal",
+              fontWeight: 500,
+              fontSize: 13,
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              color: "var(--terracota)",
+            }}
+          >
+            Carl Jung
+          </cite>
+        </div>
       </div>
 
       <style>{`
-        @media (max-width: 767px) {
-          .vs-hero-cta { flex-direction: column !important; gap: 12px !important; align-items: stretch !important; }
-          .vs-hero-cta > a { width: 100% !important; text-align: center !important; padding: 16px 24px !important; }
+        /* Mobile (<= 768px) */
+        @media (max-width: 768px) {
+          .vs-hero-blob,
+          .vs-hero-photo-deco,
+          .vs-hero-photo-vignette-left,
+          .vs-hero-photo-vignette-right,
+          .vs-hero-photo-vignette-top {
+            display: none !important;
+          }
+          .vs-hero-photo {
+            margin: 24px 0 !important;
+          }
+          .vs-hero-img {
+            width: 100% !important;
+            height: 280px !important;
+            object-fit: cover !important;
+            object-position: center 20% !important;
+            border-radius: var(--radius-lg) !important;
+          }
+          .vs-hero-cta {
+            flex-direction: column !important;
+            gap: 12px !important;
+            align-items: stretch !important;
+            margin-top: 0 !important;
+          }
+          .vs-hero-cta > a {
+            width: 100% !important;
+            text-align: center !important;
+            padding: 16px 24px !important;
+          }
+          .vs-hero-badges {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 10px !important;
+            margin-top: 20px !important;
+            font-size: 14px !important;
+            color: rgba(242,213,187,0.75) !important;
+          }
+          .vs-hero-badge {
+            gap: 10px !important;
+            font-weight: 500 !important;
+          }
+          .vs-hero-badge-sep {
+            display: none !important;
+          }
+          .vs-hero-jung {
+            padding: 32px 0 40px !important;
+          }
+          .vs-hero-jung-quote {
+            font-size: 52px !important;
+          }
+          .vs-hero-jung-text {
+            font-size: 17px !important;
+            line-height: 1.65 !important;
+          }
         }
+
+        /* Desktop (>= 1024px): two-column grid via grid-template-areas */
         @media (min-width: 1024px) {
-          .vs-hero-grid { grid-template-columns: 52% 48% !important; gap: 48px !important; }
-          .vs-hero-text { order: 1 !important; }
-          .vs-hero-photo { order: 2 !important; }
+          .vs-hero-grid {
+            display: grid !important;
+            grid-template-columns: 52% 48% !important;
+            column-gap: 48px !important;
+            row-gap: 0 !important;
+            align-items: center !important;
+            grid-template-areas:
+              "eyebrow  photo"
+              "h1       photo"
+              "subtitle photo"
+              "cta      photo"
+              "badges   photo"
+              "jung     jung";
+          }
+          .vs-hero-eyebrow  { grid-area: eyebrow; }
+          .vs-hero-h1       { grid-area: h1; }
+          .vs-hero-subtitle { grid-area: subtitle; }
+          .vs-hero-photo    { grid-area: photo; height: 480px; border-radius: 0 var(--radius-xl) var(--radius-xl) 0; }
+          .vs-hero-cta      { grid-area: cta; }
+          .vs-hero-badges   { grid-area: badges; }
+          .vs-hero-jung     { grid-area: jung; }
         }
       `}</style>
     </section>
