@@ -92,7 +92,7 @@ export default function CTAFinal() {
         </p>
 
         <div
-          className="vs-cta-buttons"
+          className="vs-cta-buttons fade-up delay-300"
           style={{
             marginTop: 44,
             display: "flex",
