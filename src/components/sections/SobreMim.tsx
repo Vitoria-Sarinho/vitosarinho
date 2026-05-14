@@ -52,8 +52,9 @@ export default function SobreMim() {
           />
         </div>
 
-        <div>
+        <div ref={textRef}>
           <div
+            className="fade-up"
             style={{
               fontFamily: "Montserrat, sans-serif",
               fontWeight: 500,
