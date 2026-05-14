@@ -18,7 +18,7 @@ export default function SobreMim() {
           alignItems: "center",
         }}
       >
-        <div style={{ position: "relative", overflow: "visible" }}>
+        <div ref={photoRef} className="fade-left" style={{ position: "relative", overflow: "visible" }}>
           <div
             aria-hidden
             className="vs-sobre-deco"
