@@ -53,36 +53,8 @@ function Card({ d }: { d: Depo }) {
         msOverflowStyle: "none",
       }}
     >
-      <span
-        aria-hidden
-        className="vs-depo-quote"
-        style={{
-          position: "absolute",
-          top: 8,
-          left: 16,
-          fontFamily: "'Playfair Display', serif",
-          fontSize: 96,
-          color: "var(--marrom)",
-          opacity: 0.08,
-          lineHeight: 1,
-        }}
-      >
-        "
-      </span>
-      <p
-        style={{
-          fontFamily: "Montserrat, sans-serif",
-          fontWeight: 400,
-          fontSize: 15,
-          color: "var(--texto-medio)",
-          lineHeight: 1.8,
-          position: "relative",
-          marginBottom: 28,
-        }}
-      >
-        {d.text}
-      </p>
-      <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+      {/* Patient info on top */}
+      <div style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: 14, marginBottom: 20 }}>
         <div
           style={{
             width: 44,
@@ -96,18 +68,53 @@ function Card({ d }: { d: Depo }) {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            flexShrink: 0,
           }}
         >
           {d.initial}
         </div>
         <div>
-          <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 500, fontSize: 14, color: "var(--marrom-escuro)" }}>
+          <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 600, fontSize: 14, color: "var(--marrom-escuro)", marginBottom: 2 }}>
             {d.name}
           </div>
-          <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 400, fontSize: 12, color: "var(--texto-muted)", marginTop: 2 }}>
+          <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 400, fontSize: 12, color: "var(--texto-muted)" }}>
             {d.info}
           </div>
         </div>
+      </div>
+
+      {/* Decorative quote then text */}
+      <div style={{ position: "relative" }}>
+        <span
+          aria-hidden
+          className="vs-depo-quote"
+          style={{
+            position: "absolute",
+            top: -16,
+            left: -8,
+            fontFamily: "'Playfair Display', serif",
+            fontSize: 96,
+            color: "var(--marrom)",
+            opacity: 0.08,
+            lineHeight: 1,
+            pointerEvents: "none",
+          }}
+        >
+          "
+        </span>
+        <p
+          style={{
+            fontFamily: "Montserrat, sans-serif",
+            fontWeight: 400,
+            fontSize: 15,
+            color: "var(--texto-medio)",
+            lineHeight: 1.8,
+            position: "relative",
+            margin: 0,
+          }}
+        >
+          {d.text}
+        </p>
       </div>
     </article>
   );
