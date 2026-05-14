@@ -53,36 +53,8 @@ function Card({ d }: { d: Depo }) {
         msOverflowStyle: "none",
       }}
     >
-      <span
-        aria-hidden
-        className="vs-depo-quote"
-        style={{
-          position: "absolute",
-          top: 8,
-          left: 16,
-          fontFamily: "'Playfair Display', serif",
-          fontSize: 96,
-          color: "var(--marrom)",
-          opacity: 0.08,
-          lineHeight: 1,
-        }}
-      >
-        "
-      </span>
-      <p
-        style={{
-          fontFamily: "Montserrat, sans-serif",
-          fontWeight: 400,
-          fontSize: 15,
-          color: "var(--texto-medio)",
-          lineHeight: 1.8,
-          position: "relative",
-          marginBottom: 28,
-        }}
-      >
-        {d.text}
-      </p>
-      <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+      {/* Patient info on top */}
+      <div style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: 14, marginBottom: 20 }}>
         <div
           style={{
             width: 44,
@@ -96,18 +68,53 @@ function Card({ d }: { d: Depo }) {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            flexShrink: 0,
           }}
         >
           {d.initial}
         </div>
         <div>
-          <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 500, fontSize: 14, color: "var(--marrom-escuro)" }}>
+          <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 600, fontSize: 14, color: "var(--marrom-escuro)", marginBottom: 2 }}>
             {d.name}
           </div>
-          <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 400, fontSize: 12, color: "var(--texto-muted)", marginTop: 2 }}>
+          <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 400, fontSize: 12, color: "var(--texto-muted)" }}>
             {d.info}
           </div>
         </div>
+      </div>
+
+      {/* Decorative quote then text */}
+      <div style={{ position: "relative" }}>
+        <span
+          aria-hidden
+          className="vs-depo-quote"
+          style={{
+            position: "absolute",
+            top: -16,
+            left: -8,
+            fontFamily: "'Playfair Display', serif",
+            fontSize: 96,
+            color: "var(--marrom)",
+            opacity: 0.08,
+            lineHeight: 1,
+            pointerEvents: "none",
+          }}
+        >
+          "
+        </span>
+        <p
+          style={{
+            fontFamily: "Montserrat, sans-serif",
+            fontWeight: 400,
+            fontSize: 15,
+            color: "var(--texto-medio)",
+            lineHeight: 1.8,
+            position: "relative",
+            margin: 0,
+          }}
+        >
+          {d.text}
+        </p>
       </div>
     </article>
   );
@@ -152,11 +159,17 @@ export default function Depoimentos() {
           </p>
         </div>
 
-        {/* Desktop grid: 3 cards */}
-        <div className="vs-depo-desktop" style={{ display: "none", gridTemplateColumns: "1fr 1fr 1fr", gap: 28, marginTop: 56 }}>
-          {items.map((d) => (
-            <Card key={d.name} d={d} />
-          ))}
+        {/* Desktop marquee */}
+        <div className="vs-depo-desktop" style={{ display: "none", marginTop: 56 }}>
+          <div className="vs-depo-marquee">
+            <div className="vs-depo-track">
+              {[...items, ...items].map((d, i) => (
+                <div key={`${d.name}-${i}`} className="vs-depo-slide">
+                  <Card d={d} />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Mobile carousel: 1 card */}
@@ -242,8 +255,49 @@ export default function Depoimentos() {
       </div>
       <style>{`
         .vs-depo-card::-webkit-scrollbar { display: none; }
+        @keyframes marqueeScroll {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .vs-depo-marquee {
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+        }
+        .vs-depo-marquee::before,
+        .vs-depo-marquee::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 120px;
+          z-index: 2;
+          pointer-events: none;
+        }
+        .vs-depo-marquee::before {
+          left: 0;
+          background: linear-gradient(to right, #FFFFFF 0%, transparent 100%);
+        }
+        .vs-depo-marquee::after {
+          right: 0;
+          background: linear-gradient(to left, #FFFFFF 0%, transparent 100%);
+        }
+        .vs-depo-track {
+          display: flex;
+          flex-direction: row;
+          gap: 24px;
+          width: max-content;
+          animation: marqueeScroll 28s linear infinite;
+        }
+        .vs-depo-track:hover {
+          animation-play-state: paused;
+        }
+        .vs-depo-slide {
+          width: 360px;
+          flex-shrink: 0;
+        }
         @media (min-width: 1024px) {
-          .vs-depo-desktop { display: grid !important; }
+          .vs-depo-desktop { display: block !important; }
           .vs-depo-mobile { display: none !important; }
         }
         @media (max-width: 767px) {
