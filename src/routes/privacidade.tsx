@@ -18,7 +18,9 @@ export const Route = createFileRoute("/privacidade")({
         property: "og:description",
         content: "Como tratamos os dados pessoais coletados neste site, em conformidade com a LGPD.",
       },
+      { property: "og:url", content: "https://vitosarinho.lovable.app/privacidade" },
     ],
+    links: [{ rel: "canonical", href: "https://vitosarinho.lovable.app/privacidade" }],
   }),
   component: PrivacidadePage,
 });
