@@ -94,7 +94,7 @@ export default function SobreMim() {
           <div style={{ height: 1, background: "rgba(199,171,149,0.3)", margin: "28px 0" }} />
 
           <div
-            className="vs-sobre-valores"
+            className="vs-sobre-valores fade-up delay-300"
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
