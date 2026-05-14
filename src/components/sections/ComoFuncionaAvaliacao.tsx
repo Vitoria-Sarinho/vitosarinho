@@ -25,10 +25,12 @@ const steps = [
 ];
 
 export default function ComoFuncionaAvaliacao() {
+  const headerRef = useScrollAnimation<HTMLDivElement>(0.15);
+  const introRef = useScrollAnimation<HTMLDivElement>(0.15);
   return (
     <section id="avaliacao" className="vs-section" style={{ background: "var(--nude-fundo)" }}>
       <div className="vs-container">
-        <div style={{ textAlign: "center", maxWidth: 720, margin: "0 auto" }}>
+        <div ref={headerRef} className="fade-up" style={{ textAlign: "center", maxWidth: 720, margin: "0 auto" }}>
           <div
             style={{
               fontFamily: "Montserrat, sans-serif",
