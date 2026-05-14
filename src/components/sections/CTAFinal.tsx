@@ -1,7 +1,10 @@
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 const WA_URL =
   "https://wa.me/5581998396041?text=Ol%C3%A1%20Vit%C3%B3ria%2C%20gostaria%20de%20agendar%20uma%20consulta!";
 
 export default function CTAFinal() {
+  const wrapRef = useScrollAnimation<HTMLDivElement>(0.1);
   return (
     <section
       id="contato"
