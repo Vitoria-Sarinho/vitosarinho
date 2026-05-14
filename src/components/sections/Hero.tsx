@@ -333,23 +333,25 @@ export default function Hero() {
           className="vs-hero-badges"
           style={{
             order: 6,
-            marginTop: 28,
+            marginTop: 24,
             display: "flex",
-            flexWrap: "wrap",
-            gap: 20,
-            alignItems: "center",
+            flexDirection: "column",
+            gap: 10,
+            alignItems: "flex-start",
             fontFamily: "Montserrat, sans-serif",
-            fontSize: 13,
-            color: "rgba(242,213,187,0.55)",
+            fontWeight: 500,
+            fontSize: 14,
+            color: "rgba(242,213,187,0.75)",
           }}
         >
-          {BADGES.map((t, i) => (
-            <span key={t} className="vs-hero-badge" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
+          {BADGES.map((t) => (
+            <span
+              key={t}
+              className="vs-hero-badge"
+              style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: 10 }}
+            >
               <CheckIcon />
               {t}
-              {i < BADGES.length - 1 && (
-                <span className="vs-hero-badge-sep" style={{ marginLeft: 8, color: "rgba(242,213,187,0.3)" }}>·</span>
-              )}
             </span>
           ))}
         </div>
