@@ -255,8 +255,49 @@ export default function Depoimentos() {
       </div>
       <style>{`
         .vs-depo-card::-webkit-scrollbar { display: none; }
+        @keyframes marqueeScroll {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .vs-depo-marquee {
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+        }
+        .vs-depo-marquee::before,
+        .vs-depo-marquee::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 120px;
+          z-index: 2;
+          pointer-events: none;
+        }
+        .vs-depo-marquee::before {
+          left: 0;
+          background: linear-gradient(to right, #FFFFFF 0%, transparent 100%);
+        }
+        .vs-depo-marquee::after {
+          right: 0;
+          background: linear-gradient(to left, #FFFFFF 0%, transparent 100%);
+        }
+        .vs-depo-track {
+          display: flex;
+          flex-direction: row;
+          gap: 24px;
+          width: max-content;
+          animation: marqueeScroll 28s linear infinite;
+        }
+        .vs-depo-track:hover {
+          animation-play-state: paused;
+        }
+        .vs-depo-slide {
+          width: 360px;
+          flex-shrink: 0;
+        }
         @media (min-width: 1024px) {
-          .vs-depo-desktop { display: grid !important; }
+          .vs-depo-desktop { display: block !important; }
           .vs-depo-mobile { display: none !important; }
         }
         @media (max-width: 767px) {
