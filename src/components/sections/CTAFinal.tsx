@@ -75,7 +75,7 @@ export default function CTAFinal() {
           sua jornada de cuidado?
         </h2>
         <p
-          className="vs-cta-sub"
+          className="vs-cta-sub fade-up delay-200"
           style={{
             fontFamily: "Montserrat, sans-serif",
             fontWeight: 300,
