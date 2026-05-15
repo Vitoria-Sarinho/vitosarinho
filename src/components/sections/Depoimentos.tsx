@@ -132,7 +132,7 @@ export default function Depoimentos() {
   const noteRef = useScrollAnimation<HTMLParagraphElement>(0.15);
 
   return (
-    <section id="depoimentos" className="vs-section" style={{ background: "#FFFFFF" }}>
+    <section id="depoimentos" className="vs-section" style={{ background: "linear-gradient(160deg, #F0E4D7 0%, #E8D8C8 100%)" }}>
       <div className="vs-container">
         <div ref={headerRef} className="fade-up" style={{ textAlign: "center", maxWidth: 640, margin: "0 auto" }}>
           <div
@@ -283,11 +283,11 @@ export default function Depoimentos() {
         }
         .vs-depo-marquee::before {
           left: 0;
-          background: linear-gradient(to right, #FFFFFF 0%, transparent 100%);
+          background: linear-gradient(to right, #F0E4D7 0%, transparent 100%);
         }
         .vs-depo-marquee::after {
           right: 0;
-          background: linear-gradient(to left, #FFFFFF 0%, transparent 100%);
+          background: linear-gradient(to left, #E8D8C8 0%, transparent 100%);
         }
         .vs-depo-track {
           display: flex;

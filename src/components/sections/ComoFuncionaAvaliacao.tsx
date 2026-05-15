@@ -28,7 +28,7 @@ export default function ComoFuncionaAvaliacao() {
   const headerRef = useScrollAnimation<HTMLDivElement>(0.15);
   const introRef = useScrollAnimation<HTMLDivElement>(0.15);
   return (
-    <section id="avaliacao" className="vs-section" style={{ background: "var(--nude-fundo)" }}>
+    <section id="avaliacao" className="vs-section" style={{ background: "linear-gradient(160deg, #DFCcB8 0%, #E8D8C8 100%)" }}>
       <div className="vs-container">
         <div ref={headerRef} className="fade-up" style={{ textAlign: "center", maxWidth: 720, margin: "0 auto" }}>
           <div
