@@ -27,7 +27,7 @@ const steps = [
 export default function ComoFuncionaPsicoterapia() {
   const headerRef = useScrollAnimation<HTMLDivElement>(0.15);
   return (
-    <section id="psicoterapia" className="vs-section" style={{ background: "#FFFFFF" }}>
+    <section id="psicoterapia" className="vs-section" style={{ background: "linear-gradient(160deg, #E8D8C8 0%, #F0E4D7 100%)" }}>
       <div className="vs-container">
         <div ref={headerRef} className="fade-up" style={{ textAlign: "center", maxWidth: 640, margin: "0 auto" }}>
           <div

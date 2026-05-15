@@ -8,7 +8,7 @@ export default function SobreMim() {
   const textRef = useScrollAnimation<HTMLDivElement>(0.1);
   const cardsRef = useScrollAnimation<HTMLDivElement>(0.1);
   return (
-    <section id="sobre" className="vs-section" style={{ background: "#FFFFFF", overflowX: "hidden" }}>
+    <section id="sobre" className="vs-section" style={{ background: "linear-gradient(160deg, #F0E4D7 0%, #E8D8C8 100%)", overflowX: "hidden" }}>
       <div
         className="vs-container vs-sobre-grid"
         style={{

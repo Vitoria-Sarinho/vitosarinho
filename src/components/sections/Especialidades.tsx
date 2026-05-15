@@ -107,7 +107,7 @@ export default function Especialidades() {
   const card1Ref = useScrollAnimation<HTMLElement>(0.15);
   const card2Ref = useScrollAnimation<HTMLElement>(0.15);
   return (
-    <section id="especialidades" className="vs-section" style={{ background: "var(--nude-fundo)" }}>
+    <section id="especialidades" className="vs-section" style={{ background: "linear-gradient(160deg, #E8D8C8 0%, #DFCcB8 100%)" }}>
       <div className="vs-container">
         <div ref={headerRef} className="fade-up" style={{ textAlign: "center", maxWidth: 640, margin: "0 auto" }}>
           <div
