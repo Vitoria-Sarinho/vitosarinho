@@ -264,3 +264,30 @@ body.vs-site {
   opacity: 1;
   transform: translate(0, 0);
 }
+
+/* ── SCROLLBAR CUSTOMIZADA ── */
+
+/* Chromium (Chrome, Edge, Safari, Opera) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F0E4D7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8C4130;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C67A63;
+  transition: background 0.2s ease;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #8C4130 #F0E4D7;
+}
