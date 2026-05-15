@@ -33,6 +33,12 @@ const items: Depo[] = [
     name: "V.",
     info: "Paciente · Psicoterapia Clínica",
   },
+  {
+    text: "Me sinto muito à vontade em suas sessões, e o trabalho dela tem contribuído muito para minha qualidade de vida.",
+    initial: "B",
+    name: "B.",
+    info: "Paciente · Psicoterapia Clínica",
+  },
 ];
 
 function Card({ d }: { d: Depo }) {
