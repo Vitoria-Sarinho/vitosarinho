@@ -72,14 +72,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Vitória Sarinho - Psicóloga e Neuropsicóloga" },
+      { title: "Vitória Sarinho | Psicóloga e Neuropsicóloga" },
       {
         name: "description",
         content:
           "Atendimento humanizado em Psicoterapia Clínica e Avaliação Neuropsicológica online para todo o Brasil. Vitória Sarinho — CRP 02/28587.",
       },
       { name: "author", content: "Vitória Sarinho" },
-      { property: "og:title", content: "Vitória Sarinho - Psicóloga e Neuropsicóloga" },
+      { property: "og:title", content: "Vitória Sarinho | Psicóloga e Neuropsicóloga" },
       {
         property: "og:description",
         content:
@@ -89,7 +89,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:locale", content: "pt_BR" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#400F0F" },
-      { name: "twitter:title", content: "Vitória Sarinho - Psicóloga e Neuropsicóloga" },
+      { name: "twitter:title", content: "Vitória Sarinho | Psicóloga e Neuropsicóloga" },
       { name: "description", content: "Sou Vitória Sarinho, psicóloga clínica e neuropsicóloga com 5 anos de experiência." },
       { property: "og:description", content: "Sou Vitória Sarinho, psicóloga clínica e neuropsicóloga com 5 anos de experiência." },
       { name: "twitter:description", content: "Sou Vitória Sarinho, psicóloga clínica e neuropsicóloga com 5 anos de experiência." },
