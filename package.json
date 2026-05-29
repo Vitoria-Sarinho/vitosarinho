@@ -1,5 +1,7 @@
 {
-  "name": "tanstack_start_ts",
+  "name": "vitoria-sarinho-psi",
+  "description": "Site institucional de Vitória Sarinho, Psicóloga Clínica e Neuropsicóloga",
+  "author": "Next Assessoria",
   "private": true,
   "sideEffects": false,
   "type": "module",
